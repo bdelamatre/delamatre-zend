@@ -30,7 +30,7 @@ return array(
 
         'modules' => array(
             'application' => array(
-                'root_path' => __DIR__ . '/../../../public/assets',
+                'root_path' => 'public/assets',
 
                 'collections' => array(
                     'base_css' => array(
