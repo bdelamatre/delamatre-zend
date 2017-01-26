@@ -1,0 +1,60 @@
+<?php
+
+$folder = $this->folder;
+$localPath = 'public'.$folder;
+$id = base64_encode($folder);
+$images = array();
+
+if ($handle = opendir($localPath)) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+            $images[] = array(
+                'fileName'  => $entry,
+                'folder'    => $folder,
+                'path'      => $folder.'/'.$entry,
+            );
+        }
+    }
+    closedir($handle);
+}
+
+?>
+<div id="carousel-gallery" class="carousel carousel-gallery slide" data-ride="carousel" data-interval="0">
+
+    <!-- slides Container -->
+    <div class="carousel-inner" role="listbox">
+
+        <!-- slides -->
+        <?php foreach($images as $key=>$image): ?>
+            <div class="item <?php if($key==0){echo 'active';}?>">
+                <img src="<?=$image['path']?>" alt="<?=$image->description?>" title="<?=$image->title?>" />
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+
+    <?php if(count($images)>1): ?>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-gallery" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#carousel-gallery" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+        <!-- -indicators -->
+        <ol class="carousel-indicators">
+            <?php foreach($images as $key=>$image): ?>
+                <li data-target="#carousel-gallery" data-slide-to="<?=$key?>" class="<?php if($key==0){echo 'active';}?>">
+                    <img src="<?=$image['path']?>" />
+                </li>
+            <?php endforeach; ?>
+        </ol>
+
+    <?php endif; ?>
+
+</div>

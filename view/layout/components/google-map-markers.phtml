@@ -1,0 +1,75 @@
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+<br/>
+<br/>
+
+<?php $this->inlineScript()->captureStart();
+echo <<<JS
+
+jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?key={$this->config()['google']['maps']['code']}&gsensor=false&callback=initialize";
+    document.body.appendChild(script);
+});
+
+function initialize() {
+      
+    var geocoder;
+    var map;    
+    geocoder = new google.maps.Geocoder();
+    var bounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(85, -180),	// top left corner of map
+        new google.maps.LatLng(-85, 180)	// bottom right corner
+    );
+    var mapOptions = {
+        center: new google.maps.LatLng(0,0),
+        zoom: 2,
+        minZoom: 2,
+        mapTypeId: 'roadmap'
+    };
+                    
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    
+    var k = 5.0; 
+    var n = bounds.getNorthEast().lat() - k;
+    var e = bounds.getNorthEast().lng() - k;
+    var s = bounds.getSouthWest().lat() + k;
+    var w = bounds.getSouthWest().lng() + k;
+    var neNew = new google.maps.LatLng( n, e );
+    var swNew = new google.maps.LatLng( s, w );
+    boundsNew = new google.maps.LatLngBounds( swNew, neNew );
+    map.fitBounds(boundsNew);
+    
+    
+    // Multiple Markers
+    var markers = $this->markersEncoded;
+               
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+        
+        //geocode a location
+        //geocoder.geocode( { 'address': markers[i][1] }, function(results, status) {
+          //if (status == 'OK') {
+            //map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(markers[i].latitude,markers[i].longitude)
+                //position: results[0].geometry.location
+            });
+          //} else {
+          //  console.log('Geocode was not successful for the following reason: ' + status);
+          //}
+        //});
+        
+    }
+    
+    
+    google.maps.event.addDomListener(window, 'load', initialize);
+        
+}
+JS;
+$this->inlineScript()->captureEnd();
+?>

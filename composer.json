@@ -1,0 +1,30 @@
+{
+    "name": "bdelamatre/delamatre-zend",
+    "description": "Custom Zend Framework 2 extensions",
+    "type": "library",
+    "require": {
+        "zendframework/zendframework": "~2.5",
+        "doctrine/doctrine-orm-module": "0.*",
+        "zf-commons/zfc-base": "0.*",
+        "zf-commons/zfc-user": "1.*",
+        "zf-commons/zfc-user-doctrine-orm" : "1.*",
+        "widmogrod/zf2-assetic-module": "1.*",
+        "neilime/zf2-twb-bundle": "2.*@stable",
+        "geoip2/geoip2": "2.4.*",
+        "google/apiclient" : "^2.0",
+        "getresponse/getresponse" : "0.*",
+        "khill/lavacharts" : "3.0.*"
+    },
+    "autoload":{
+        "psr-4":{
+            "DelamatreZend\\" : "src/"
+        },
+        "classmap": ["src/salesforcetoolkitphp/"]
+    },
+    "authors": [
+        {
+            "name": "Byron DeLaMatre",
+            "email": "byron@delamatre.com"
+        }
+    ]
+}
