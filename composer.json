@@ -33,7 +33,7 @@
             "DelamatreZend" : "src/"
         },
         "classmap": [
-            "Module.php",
+            "./Module.php",
             "src/salesforcetoolkitphp/"
         ]
     }
