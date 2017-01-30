@@ -1,44 +1,26 @@
 <?php
 
-namespace DelamatreZend;
-
-use DelamatreZend\Entity\User;
-
 return array(
 
     //default assetic configuration
     'assetic_configuration' => array(
 
-        // Use on development environment
-        'debug' => true,
-        'buildOnRequest' => true,
-
-
-        // this is specific to this project
-        'webPath' => realpath('public/assets'),
-        'basePath' => 'assets',
-
         'default' => array(
             'assets' => array(
-                '@base_css',
-                '@base_js',
-            ),
-            'options' => array(
-                'mixin' => true
+                '@application_css',
+                '@application_js',
             ),
         ),
 
         'modules' => array(
-            'delamatre-zend' => array(
-                'root_path' => __DIR__.'/../bower_components',
+
+            'application' => array(
+                'root_path' => 'public/assets',
 
                 'collections' => array(
-                    'base_css' => array(
+                    'application_css' => array(
                         'assets' => array(
-                            'bootstrap/dist/css/bootstrap.css',
-                            'bootstrap/dist/css/bootstrap-theme.css',
-                            'font-awesome/css/font-awesome.css',
-                            'yamm3/yamm/yamm.css',
+                            'delamatre-zend/css/delamatre-zend.css',
                         ),
                         'filters' => array(
                             '?CssRewriteFilter' => array(
@@ -49,12 +31,9 @@ return array(
                             ),
                         ),
                     ),
-                    'base_js' => array(
+                    'application_js' => array(
                         'assets' => array(
-                            'jquery/dist/jquery.js',
-                            'bootstrap/dist/js/bootstrap.js',
-                            'jquery-validate/dist/jquery.validate.js',
-                            'parallax.js/parallax.js',
+                            'delamatre-zend/js/delamatre-zend.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(
