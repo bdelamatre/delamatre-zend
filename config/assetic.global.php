@@ -30,15 +30,15 @@ return array(
 
         'modules' => array(
             'application' => array(
-                'root_path' => 'public/assets',
+                'root_path' => 'bower_components',
 
                 'collections' => array(
                     'base_css' => array(
                         'assets' => array(
-                            'bootstrap/css/bootstrap.min.css',
-                            'bootstrap/css/bootstrap-theme.min.css',
-                            'font-awesome/css/font-awesome.min.css',
-                            'yamm/yamm.css',
+                            'bower_components/bootstrap/dist/css/bootstrap.css',
+                            'bower_components/bootstrap/dist/css/bootstrap-theme.css',
+                            'bower_components/font-awesome/css/font-awesome.css',
+                            'bower_components/yamm3/yamm/yamm.css',
                         ),
                         'filters' => array(
                             '?CssRewriteFilter' => array(
@@ -51,10 +51,10 @@ return array(
                     ),
                     'base_js' => array(
                         'assets' => array(
-                            'jquery/jquery.min.js',
-                            'bootstrap/js/bootstrap.min.js',
-                            'jquery-validate/jquery.validate.min.js',
-                            'parallax/parallax.min.js',
+                            'bower_components/jquery/dist/jquery.js',
+                            'bower_components/bootstrap/dist/js/bootstrap.js',
+                            'bower_components/jquery-validate/dist/jquery.validate.js',
+                            'bower_components/parallax.js/parallax.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(

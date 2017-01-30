@@ -9,9 +9,12 @@ define('ENVIRONMENT_TYPE_DEVELOPMENT','DEVELOPMENT');
 
 return array(
     'myapp' => array(
+        'timezone' => 'America/Chicago',
         'environment' => array(
             'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
             'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',
+            'display_errors' => true,
+            'display_exceptions' => true,
         ),
         'name' => 'Delamatre Zend',
         'appendTitle' => 'Delamatre Zend',
@@ -31,7 +34,7 @@ return array(
         'baseurl' => 'http://localhost',
         'smtp' => array(
             'enabled'           => SMTP_ENABLED,
-            //'display'           => 'Vulcan Systems',
+            //'display'           => 'Byron DeLaMatre',
             'name'              => 'smtp.office365.com',
             'host'              => 'smtp.office365.com',
             'port'              => 587,
@@ -46,7 +49,7 @@ return array(
             'enable' => false,
             'timeout' => 60000,
             'exceptions' =>array(
-                'routes' => array('home','contact','thank-you','thank-you-newsletter','sitemap','sitemap-xml','careeers','community','branding'),
+                'routes' => array('home','contact','thank-you','thank-you-newsletter','sitemap','sitemap-xml','careers','community','branding'),
                 'modules' => array('DelamatreZendCmsAdmin'),
                 'controllers' => array(),
             ),

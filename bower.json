@@ -1,0 +1,13 @@
+{
+  "directory": "vendor/bower_components/",
+  "timeout": 120000,
+  "name": "Bower config for DelamatreZend",
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "jquery": "~3.1.1",
+    "jquery-validate": "latest",
+    "parallax.js": "latest",
+    "yamm3": "latest",
+    "font-awesome": "~4.7"
+  }
+}

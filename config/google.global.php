@@ -12,11 +12,11 @@ To customize and use Adobe Typekit copy this your config/* directory and insert 
 return array(
     'google' => array(
         'analytics' => array(
-            'enabled' => GOOGLE_MAPS_DISABLED,
+            'enabled' => GOOGLE_ANALYTICS_DISABLED,
             'code'=>'',
         ),
         'maps' => array(
-            'enabled' => GOOGLE_MAPS_ENABLED,
+            'enabled' => GOOGLE_MAPS_DISABLED,
             'code'=>'',
         ),
     ),

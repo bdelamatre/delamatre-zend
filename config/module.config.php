@@ -104,8 +104,6 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'DelamatreZend\Controller\Index' => Controller\IndexController::class,
-            'DelamatreZend\Controller\Blog' => Controller\BlogController::class,
-            'DelamatreZend\Controller\Lead' => Controller\LeadController::class,
         ),
     ),
 
