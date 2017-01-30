@@ -1,0 +1,14 @@
+<?php
+
+return array(
+    'myapp' => array(
+        'environment' => array(
+            'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
+            'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',
+            'display_errors' => true,
+            'display_exceptions' => true,
+        ),
+        'baseurl' => 'http://localhost',
+    ),
+
+);

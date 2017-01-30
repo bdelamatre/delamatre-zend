@@ -8,35 +8,13 @@ use Zend\Mail\Transport\SmtpOptions;
 
 class AbstractActionController extends \Zend\Mvc\Controller\AbstractActionController{
 
+    use DoctrineIntegration;
     use MaxmindIntegration;
     use SalesforceIntegration;
     use GoogleAnalyticsIntegration;
     use GetreponseIntegration;
     use LavachartsIntegration;
     use User;
-
-    /**
-     * @var \Doctrine\ORM\EntityManager
-     */
-    protected $em;
-
-    /**
-     * @return \Doctrine\ORM\EntityManager
-     */
-    public function getEntityManager()
-    {
-        if (null === $this->em) {
-            $this->em = $this->getServiceLocator()->get('doctrine.entitymanager.orm_default');
-        }
-        return $this->em;
-    }
-
-    /**
-     * @return \Doctrine\ORM\QueryBuilder
-     */
-    public function createQueryBuilder(){
-        return $this->getEntityManager()->createQueryBuilder();
-    }
 
     /**
      * @return array|object
@@ -49,7 +27,7 @@ class AbstractActionController extends \Zend\Mvc\Controller\AbstractActionContro
      * @return \Zend\Session\SessionManager
      */
     public function getSessionManager(){
-        return $this->getEvent()->getApplication()->getServiceManager()->get('Zend\Session\SessionManager');
+        return $this->getEvent()->getApplication()->getServiceManager()->get('\Zend\Session\SessionManager');
     }
 
 
@@ -75,15 +53,6 @@ class AbstractActionController extends \Zend\Mvc\Controller\AbstractActionContro
         $mail->setFrom($this->getConfig()['myapp']['smtp']['connection_config']['username']);
         return $mail;
     }
-
-    /**
-     * @param $sql
-     * @return string
-     */
-    public function quoteSQL($sql){
-        return $this->getEntityManager()->getConnection()->quote($sql);
-    }
-
 
     /**
      * @return \Zend\View\Helper\HeadTitle

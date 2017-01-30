@@ -1,0 +1,82 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<?php echo $this->headTitle($this->config()['myapp']['appendTitle'])->setSeparator(' - ')->setAutoEscape(false); ?>
+<?php echo $this->headMeta()
+    ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+    ->appendHttpEquiv('X-UA-Compatible', 'IE=edge'); ?>
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link href="/assets/base_css.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/assets/application_css.css" media="screen" rel="stylesheet" type="text/css">
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/base_js.js"></script>
+<script type="text/javascript" src="/assets/application_js.js"></script>
+<?php echo $this->adobeTypeKit()?>
+<?php echo $this->googleAnalytics(null,null,array('1'=>session_id(),'2'=>$this->IPAddress())); ?>
+<?php echo $this->inlineScript() ?>
+</head>
+<body class="wf-loading">
+
+    <?php if($this->zfcUserIdentity()
+                || $this->config()['myapp']['environment']['type']!=ENVIRONMENT_TYPE_PRODUCTION): ?>
+
+    <!-- environment / user notification -->
+    <div class="alert alert-warning">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <?php if($this->config()['myapp']['environment']['type']!=ENVIRONMENT_TYPE_PRODUCTION ):?>
+                    This is a <?=$this->config()['myapp']['environment']['type']?> environment. Notes: <?=$this->config()['myapp']['environment']['notes']?>
+                <?php endif; ?>
+            </div>
+            <div class="col-sm-6 text-right">
+                <?php if($this->zfcUserIdentity()):?>
+                    Logged in as  <?=$this->zfcUserDisplayNAme()?> <span class="text-muted">[<?=$this->zfcUserIdentity()->getType()?>]</span> <a href="/user/logout">Logout</a>
+                <?php else: ?>
+                    <a href="/user/login">Login</a>
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </div>
+
+    <?php endif; ?>
+
+    <!-- start header -->
+    <header class="header">
+
+        <div class="container">
+
+            <!-- top right content -->
+            <div class="header-extra pull-right">
+                <a class="emphasis" href="mailto:<?=$this->config()['myapp']['contact']['email']?>" title="e-mail address">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <?=$this->config()['myapp']['contact']['email'] ?>
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="emphasis" href="tel:<?=$this->config()['myapp']['contact']['phone_link']?>" title="phone number">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <?=$this->config()['myapp']['contact']['phone_formatted']?>
+                </a>
+            </div>
+
+        </div>
+
+    </header><!-- end header -->
+
+    <!-- navigation -->
+    <?php //echo $this->navigation('default')->menu()->setPartial(array('layout/navigation/menu.phtml','default'))->render(); ?>
+
+    <!-- content -->
+    <?php echo $this->content; ?>
+
+    <!-- footer -->
+    <footer class="footer">
+
+
+    </footer>
+
+</body>
+</html>

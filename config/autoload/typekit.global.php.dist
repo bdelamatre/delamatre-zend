@@ -1,0 +1,11 @@
+<?php
+
+/**
+To customize and use Adobe Typekit copy this your config/* directory and insert your kit id
+**/
+return array(
+    'typekit' => array(
+        'enabled' => TYPEKIT_ENABLED,
+        'id' => '',
+    ),
+);
