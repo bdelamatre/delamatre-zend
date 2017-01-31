@@ -10,9 +10,8 @@ return array(
     'assetic_configuration' => array(
 
         // Use on development environment
-        'debug' => true,
-        'buildOnRequest' => true,
-
+        'debug' => false,
+        'buildOnRequest' => false,
 
         // this is specific to this project
         'webPath' => realpath('public/assets'),
@@ -41,7 +40,7 @@ return array(
                             'yamm3/yamm/yamm.css',
                         ),
                         'filters' => array(
-                            '?CssRewriteFilter' => array(
+                            'CssRewriteFilter' => array(
                                 'name' => 'Assetic\Filter\CssRewriteFilter'
                             ),
                             '?CssMinFilter' => array(

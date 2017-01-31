@@ -1,0 +1,14 @@
+<?php
+
+return array(
+
+    //default assetic configuration
+    'assetic_configuration' => array(
+
+        // Use on development environment
+        'debug' => false,
+        'buildOnRequest' => true,
+
+    ),
+
+);
