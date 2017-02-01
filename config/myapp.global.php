@@ -6,6 +6,7 @@ define('ENVIRONMENT_TYPE_DEVELOPMENT','DEVELOPMENT');
 
 return array(
     'myapp' => array(
+        'baseurl' => 'http://localhost',
         'timezone' => 'America/Chicago',
         'environment' => array(
             'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
@@ -16,9 +17,26 @@ return array(
         'name' => 'Delamatre Zend',
         'appendTitle' => 'Delamatre Zend',
         'contact' => array(
+            'company_name'=>'Delamatre, LLC',
             'email'=>'byron@delamatre',
             'phone_formatted'=>'+1 (123) 345-7890',
             'phone_link'=>'11234567890',
+            'fax_formatted'=>'',
+            'fax_link'=>'',
+            'street'=>'',
+            'city'=>'',
+            'state'=>'',
+            'zip'=>'',
+            'country'=>'',
+        ),
+        'author' => array(
+            'company_name'=>'',
+            'website'=>'',
+            'email'=>'',
+            'phone_formatted'=>'',
+            'phone_link'=>'',
+            'fax_formatted'=>'',
+            'fax_link'=>'',
             'street'=>'',
             'city'=>'',
             'state'=>'',
@@ -28,7 +46,6 @@ return array(
         'date_format' => 'm-d-Y',
         'datetime_format' => 'm/d/Y h:i:s',
         'time_format' => 'g:i A',
-        'baseurl' => 'http://localhost',
         'smtp' => array(
             //'display'           => 'Byron DeLaMatre',
             'name'              => 'smtp.office365.com',
