@@ -83,6 +83,7 @@ class Module
             __DIR__ . '/config/doctrine.global.php',
             __DIR__ . '/config/getresponse.global.php',
             __DIR__ . '/config/google.global.php',
+            __DIR__ . '/config/filemanager.global.php',
             __DIR__ . '/config/maxmind.global.php',
             __DIR__ . '/config/myapp.global.php',
             __DIR__ . '/config/salesforce.global.php',
