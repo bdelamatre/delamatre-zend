@@ -14,6 +14,7 @@ class AbstractActionController extends \Zend\Mvc\Controller\AbstractActionContro
     use GoogleAnalyticsIntegration;
     use GetreponseIntegration;
     use LavachartsIntegration;
+    use FilemanagerIntegration;
     use User;
 
     /**
