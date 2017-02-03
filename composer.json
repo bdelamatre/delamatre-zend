@@ -28,7 +28,8 @@
         "getresponse/getresponse" : "~0.0.2",
         "khill/lavacharts" : "~3.0",
         "natxet/CssMin" : "~3.0.4",
-        "lmammino/jsmin4assetic": "~1.0.0"
+        "lmammino/jsmin4assetic": "~1.0.0",
+        "studio-42/elfinder": "~2.1.20"
     },
     "autoload":{
         "psr-0":{

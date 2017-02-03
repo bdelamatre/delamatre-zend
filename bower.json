@@ -9,6 +9,7 @@
     "parallax.js": "latest",
     "yamm3": "latest",
     "font-awesome": "~4.7",
-    "summernote": "latest"
+    "summernote": "latest",
+    "elfinder": "latest"
   }
 }

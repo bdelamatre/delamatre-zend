@@ -66,6 +66,8 @@ return array(
                     'admin_js' => array(
                         'assets' => array(
                             'summernote/dist/summernote.js',
+                            'elfinder/js/elfinder.full.js',
+                            'summernote-ext-elfinder-master/summernote-ext-elfinder.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(
@@ -76,6 +78,8 @@ return array(
                     'admin_css' => array(
                         'assets' => array(
                             'summernote/dist/summernote.css',
+                            'elfinder/css/elfinder.full.css',
+                            'elfinder/css/theme.css',
                         ),
                         'filters' => array(
                             'CssRewriteFilter' => array(
