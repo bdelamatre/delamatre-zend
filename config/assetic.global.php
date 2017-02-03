@@ -65,7 +65,7 @@ return array(
                     ),
                     'admin_js' => array(
                         'assets' => array(
-                            'summernote/summernote.js',
+                            'summernote/dist/summernote.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(
@@ -75,7 +75,7 @@ return array(
                     ),
                     'admin_css' => array(
                         'assets' => array(
-                            'summernote/summernote.css',
+                            'summernote/dist/summernote.css',
                         ),
                         'filters' => array(
                             'CssRewriteFilter' => array(
