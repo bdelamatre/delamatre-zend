@@ -9,6 +9,6 @@
     "parallax.js": "latest",
     "yamm3": "latest",
     "font-awesome": "~4.7",
-    "bootstrap-wysiwyg": "latest"
+    "summernote": "latest"
   }
 }

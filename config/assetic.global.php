@@ -21,6 +21,7 @@ return array(
             'assets' => array(
                 '@base_css',
                 '@base_js',
+                '@admin_css',
                 '@admin_js',
             ),
             'options' => array(
@@ -64,11 +65,24 @@ return array(
                     ),
                     'admin_js' => array(
                         'assets' => array(
-                            'bootstrap-wysiwyg/bootstrap-wysiwyg.js',
+                            'summernote/summernote.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(
                                 'name' => 'Assetic\Filter\JSMinFilter'
+                            ),
+                        ),
+                    ),
+                    'admin_css' => array(
+                        'assets' => array(
+                            'summernote/summernote.css',
+                        ),
+                        'filters' => array(
+                            'CssRewriteFilter' => array(
+                                'name' => 'Assetic\Filter\CssRewriteFilter'
+                            ),
+                            '?CssMinFilter' => array(
+                                'name' => 'Assetic\Filter\CssMinFilter'
                             ),
                         ),
                     ),
