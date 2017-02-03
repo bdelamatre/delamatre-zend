@@ -52,7 +52,7 @@ return array(
                     ),
                     'base_js' => array(
                         'assets' => array(
-                            'jquery/dist/jquery.js',
+                            'jquery/jquery.js',
                             'bootstrap/dist/js/bootstrap.js',
                             'jquery-validate/dist/jquery.validate.js',
                             'parallax.js/parallax.js',
