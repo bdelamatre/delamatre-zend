@@ -65,6 +65,7 @@ return array(
                     ),
                     'admin_js' => array(
                         'assets' => array(
+                            'jquery-ui/jquery-ui.js',
                             'summernote/dist/summernote.js',
                             'elfinder/js/elfinder.full.js',
                             'summernote-ext-elfinder-master/summernote-ext-elfinder.js',
