@@ -83,25 +83,4 @@ trait GoogleAnalyticsIntegration{
             'ga:sessions');
     }
 
-    /*function printResults($results)
-    {
-        // Parses the response from the Core Reporting API and prints
-        // the profile name and total sessions.
-        if (count($results->getRows()) > 0) {
-
-            // Get the profile name.
-            $profileName = $results->getProfileInfo()->getProfileName();
-
-            // Get the entry for the first entry in the first row.
-            $rows = $results->getRows();
-            $sessions = $rows[0][0];
-
-            // Print the results.
-            print "First view (profile) found: $profileName\n";
-            print "Total sessions: $sessions\n";
-        } else {
-            print "No results found.\n";
-        }
-    }*/
-
 }

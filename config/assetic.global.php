@@ -21,6 +21,7 @@ return array(
             'assets' => array(
                 '@base_css',
                 '@base_js',
+                '@admin_js',
             ),
             'options' => array(
                 'mixin' => true
@@ -54,6 +55,16 @@ return array(
                             'bootstrap/dist/js/bootstrap.js',
                             'jquery-validate/dist/jquery.validate.js',
                             'parallax.js/parallax.js',
+                        ),
+                        'filters' => array(
+                            '?JSMinFilter' => array(
+                                'name' => 'Assetic\Filter\JSMinFilter'
+                            ),
+                        ),
+                    ),
+                    'admin_js' => array(
+                        'assets' => array(
+                            'bootstrap-wysiwyg/bootstrap-wysiwyg.js',
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(
