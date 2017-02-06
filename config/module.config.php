@@ -134,6 +134,7 @@ return array(
             'adobeTypeKit'      => 'DelamatreZend\View\Helper\AdobeTypeKit',
             'googleAnalytics'   => 'DelamatreZend\View\Helper\GoogleAnalytics',
             'fontAwesome'       => 'DelamatreZend\View\Helper\FontAwesome',
+            'icon'              => 'DelamatreZend\View\Helper\Icon',
             'iconCheckMark'     => 'DelamatreZend\View\Helper\IconCheckMark',
             'IPAddress'         => 'DelamatreZend\View\Helper\IPAddress',
             'yesNo'             => 'DelamatreZend\View\Helper\YesNo',

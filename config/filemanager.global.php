@@ -10,12 +10,12 @@ return array(
     'filemanager' => array(
         'enable' => FILEMANAGER_DISABLED,
         'locale' => 'en_US.UTF-8',
-        'roots'  => array(
+        /*'roots'  => array(
             array(
                 'driver' => 'LocalFileSystem',
                 'path'   => '/',
                 'URL'    => '/',
             )
-        )
+        )*/
     ),
 );
