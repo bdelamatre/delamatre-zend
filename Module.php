@@ -9,6 +9,9 @@
 
 namespace DelamatreZend;
 
+use Monolog\Handler\LogglyHandler;
+use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
@@ -17,9 +20,73 @@ class Module
 
     public function onBootstrap(MvcEvent $e)
     {
+
         //get the event and and service manager instances
         $eventManager        = $e->getApplication()->getEventManager();
         $serviceManager      = $e->getApplication()->getServiceManager();
+        $config              = $serviceManager->get('Config');
+
+
+        //set default timezone from config
+        if(isset($config['myapp']['timezone'])){
+            date_default_timezone_set($config['myapp']['timezone']);
+        }
+
+        //set error reporting from config
+        if(isset($config['myapp']['environment']['error_reporting'])){
+            error_reporting($config['myapp']['environment']['error_reporting']);
+        }
+
+        //set display errors from config
+        if(isset($config['myapp']['environment']['display_errors'])){
+            ini_set('display_errors', $config['myapp']['environment']['display_errors']);
+        }
+
+        //set display exceptions from config
+        if(isset($config['myapp']['environment']['display_exceptions'])){
+            ini_set('display_exception', $config['myapp']['environment']['display_exceptions']);
+        }
+
+        //log exceptions
+        $eventManager->attach('dispatch.error', function($e){
+            $exception = $e->getResult()->exception;
+            if ($exception) {
+
+                $serviceManager      = $e->getApplication()->getServiceManager();
+                $config              = $serviceManager->get('Config');
+
+                //if logging exceptions
+                if(isset($config['myapp']['environment']['log_exceptions'])
+                    && $config['myapp']['environment']['log_exceptions']){
+
+                    //create logger
+                    $log = new Logger('exceptions');
+
+                    //log to file
+                    if(isset($config['myapp']['environment']['log_file'])
+                        && $config['myapp']['environment']['log_file']){
+
+                        $formatter = new \Monolog\Formatter\LineFormatter();
+                        $formatter->includeStacktraces(true);
+
+                        $streamHandler = new StreamHandler($config['myapp']['environment']['log_file'], Logger::ERROR);
+                        $streamHandler->setFormatter($formatter);
+                        $log->pushHandler($streamHandler);
+
+                    }
+
+                    //log to loggly
+                    if(isset($config['myapp']['environment']['log_loggly'])
+                        && $config['myapp']['environment']['log_loggly']){
+
+                        $log->pushHandler(new LogglyHandler($config['myapp']['environment']['log_loggly'], Logger::ERROR));
+                    }
+
+                    $log->error($exception);
+
+                }
+            }
+        });
 
         //change the layout based on the controller
         //fix-me: convert this to a configuration file
@@ -55,7 +122,6 @@ class Module
             }else{
                 $module = $controller;
             }
-
 
             $route = $matchedRoute->getMatchedRouteName();
 

@@ -8,14 +8,15 @@ return array(
     'myapp' => array(
         'baseurl' => 'http://localhost',
         'timezone' => 'America/Chicago',
+        'name' => 'Delamatre Zend',
+        'appendTitle' => 'Delamatre Zend',
         'environment' => array(
             'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
             'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',
+            'error_reporting' => E_ALL,
             'display_errors' => true,
             'display_exceptions' => true,
         ),
-        'name' => 'Delamatre Zend',
-        'appendTitle' => 'Delamatre Zend',
         'contact' => array(
             'company_name'=>'Delamatre, LLC',
             'email'=>'byron@delamatre',
