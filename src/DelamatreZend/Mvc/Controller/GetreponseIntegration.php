@@ -62,8 +62,11 @@ trait GetreponseIntegration{
     }
 
     public function getGetresponseClients(){
+        $accounts = $this->getGetresponseAccounts();
+        foreach($accounts as $account){
+            $this->getGetresponseClient($account);
+        }
         return $this->getresponse_clients;
     }
-
 
 }
