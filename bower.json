@@ -5,12 +5,9 @@
   "dependencies": {
     "bootstrap": "~3.3.7",
     "jquery": "~1.9.1",
-    "jquery-ui": "~1.12.1",
     "jquery-validate": "latest",
     "parallax.js": "latest",
     "yamm3": "latest",
-    "font-awesome": "~4.7",
-    "summernote": "latest",
-    "elfinder": "latest"
+    "font-awesome": "~4.7"
   }
 }

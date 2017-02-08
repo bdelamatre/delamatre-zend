@@ -2,8 +2,6 @@
 
 namespace DelamatreZend;
 
-use DelamatreZend\Entity\User;
-
 return array(
 
     //default assetic configuration
@@ -24,13 +22,6 @@ return array(
             ),
             'options' => array(
                 'mixin' => true
-            ),
-        ),
-
-        'routes' => array(
-            'cms-admin(.*)' => array(
-                '@admin_css',
-                '@admin_js',
             ),
         ),
 
@@ -68,35 +59,8 @@ return array(
                             ),
                         ),
                     ),
-                    'admin_js' => array(
-                        'assets' => array(
-                            'jquery-ui/jquery-ui.js',
-                            'summernote/dist/summernote.js',
-                            'elfinder/js/elfinder.full.js',
-                            'summernote-ext-elfinder-master/summernote-ext-elfinder.js',
-                        ),
-                        'filters' => array(
-                            '?JSMinFilter' => array(
-                                'name' => 'Assetic\Filter\JSMinFilter'
-                            ),
-                        ),
-                    ),
-                    'admin_css' => array(
-                        'assets' => array(
-                            'summernote/dist/summernote.css',
-                            'elfinder/css/elfinder.full.css',
-                            'elfinder/css/theme.css',
-                        ),
-                        'filters' => array(
-                            'CssRewriteFilter' => array(
-                                'name' => 'Assetic\Filter\CssRewriteFilter'
-                            ),
-                            '?CssMinFilter' => array(
-                                'name' => 'Assetic\Filter\CssMinFilter'
-                            ),
-                        ),
-                    ),
                 ),
+
             ),
         ),
 
