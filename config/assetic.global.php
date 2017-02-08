@@ -21,11 +21,16 @@ return array(
             'assets' => array(
                 '@base_css',
                 '@base_js',
-                '@admin_css',
-                '@admin_js',
             ),
             'options' => array(
                 'mixin' => true
+            ),
+        ),
+
+        'routes' => array(
+            'cms-admin(.*)' => array(
+                '@admin_css',
+                '@admin_js',
             ),
         ),
 
