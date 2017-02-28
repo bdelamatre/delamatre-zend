@@ -2,6 +2,8 @@
 
 namespace DelamatreZend\Entity;
 
+use DelamatreZend\Form\Element\UserState;
+use DelamatreZend\Form\Element\UserType;
 use Doctrine\ORM\Mapping as ORM;
 use Zend\Crypt\Password\Bcrypt;
 use ZfcUser\Entity\UserInterface;
@@ -10,33 +12,24 @@ use ZfcUser\Entity\UserInterface;
  *
  * This user object is compatible with zfc-user
  *
- * @ORM\Entity
- * @ORM\Table(name="user")
+ * @ORM\Entity,
+ * @ORM\Table(name="user",indexes={
+ *     @ORM\Index(name="index_username", columns={"username"}),
+ *     @ORM\Index(name="index_displayname", columns={"displayName"}),
+ *     @ORM\Index(name="index_email", columns={"email"}),
+ *     @ORM\Index(name="index_type", columns={"type"}),
+ *     @ORM\Index(name="index_state", columns={"state"}),
+ *     @ORM\Index(name="index_password", columns={"password"}),
+ *     @ORM\Index(name="index_auth", columns={"username","password"}),
+ *     @ORM\Index(name="index_auth2", columns={"email","password"}),
+ *     @ORM\Index(name="index_auth3", columns={"username","email","password"})
+ *
+ * })
+ * @ORM\InheritanceType("SINGLE_TABLE")
+ * @ORM\DiscriminatorColumn(name="record_type", type="string")
+ * @ORM\DiscriminatorMap({"user" = "User", "surgeon" = "Admin\Entity\Surgeon"})
  */
 class User implements UserInterface{
-
-    const TYPE_USER         = 'user';
-    const TYPE_ADMIN        = 'admin';
-    const TYPE_SUPERADMIN   = 'superadmin';
-
-    public static $userTypes = array(
-        self::TYPE_USER => 'User',
-        self::TYPE_ADMIN => 'Admin',
-        self::TYPE_SUPERADMIN => 'Superadmin',
-    );
-
-    const STATUS_ACTIVE     = 1;
-    const STATUS_INACTIVE   = 0;
-
-    public static $userState = array(
-        self::STATUS_ACTIVE => 'Enabled',
-        self::STATUS_INACTIVE => 'Disabled',
-    );
-        /**
-     * @ORM\ManyToOne(targetEntity="Organization", inversedBy="users")
-     * @ORM\JoinColumn(name="organization_id", referencedColumnName="id")
-     */
-    protected $organization;
 
     /**
      * @ORM\Id
@@ -46,9 +39,19 @@ class User implements UserInterface{
     protected $id;
 
     /**
+     * @ORM\Column(type="integer");
+     */
+    protected $organization_id;
+
+    /**
      * @ORM\Column(type="string", nullable=true)
      */
     protected $username;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $displayName;
 
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -58,8 +61,22 @@ class User implements UserInterface{
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    protected $displayName;
+    protected $preferred_contact_type;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $mobile;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $phone;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $fax;
 
     /**
      * @ORM\Column(type="string")
@@ -69,12 +86,18 @@ class User implements UserInterface{
     /**
      * @ORM\Column(type="integer")
      */
-    protected $state = self::STATUS_ACTIVE;
+    protected $state = UserState::STATUS_ACTIVE;
 
     /**
      * @ORM\Column(type="string")
      */
-    protected $type = self::TYPE_USER;
+    protected $type = UserType::TYPE_USER;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Organization", inversedBy="users")
+     * @ORM\JoinColumn(name="organization_id", referencedColumnName="id")
+     */
+    public $organization;
 
     /**
      * Get id.
@@ -257,4 +280,5 @@ class User implements UserInterface{
             }
         }
     }
+
 }

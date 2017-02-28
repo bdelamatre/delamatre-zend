@@ -8,36 +8,9 @@ use GeoIp2\Database\Reader;
 trait MaxmindIntegration{
 
     /**
-     * @return Reader
-     * @throws \Exception
+     * @var Client
      */
-    public function getGeoIP2Reader(){
-
-        //use the city database
-        if($this->getConfig()['maxmind']['use_city']==true){
-
-            //make sure that the city db file exists
-            if(!file_exists($this->getConfig()['maxmind']['city_db_file'])){
-                throw new \Exception('Maxmind City DB files `'.$this->getConfig()['maxmind']['city_db_file'].'` doesn\'t exist');
-            }
-
-            $reader = new Reader($this->getConfig()['maxmind']['city_db_file']);
-
-            //else use the country database
-        }else{
-
-            //make sure that the country db file exists
-            if(!file_exists($this->getConfig()['maxmind']['country_db_file'])){
-                throw new \Exception('Maxmind Country DB files `'.$this->getConfig()['maxmind']['country_db_file'].'` doesn\'t exist');
-            }
-
-            $reader = new Reader($this->getConfig()['maxmind']['country_db_file']);
-
-        }
-
-        return $reader;
-
-    }
+    protected $maxmind_client;
 
     /**
      * @return Client
@@ -45,9 +18,25 @@ trait MaxmindIntegration{
      */
     public function getGeoIP2Client(){
 
-        $client = new Client($this->getConfig()['maxmind']['service_id'],$this->getConfig()['maxmind']['service_key']);
+        if($this->getConfig()['maxmind']['enabled']==MAXMIND_DISABLED){
+            return null;
+        }else{
 
-        return $client;
+            if(empty($this->getConfig()['maxmind']['service_id'])){
+                throw new \Exception('No Service ID specified for Maxmind service');
+            }
+
+            if(empty($this->getConfig()['maxmind']['service_key'])){
+                throw new \Exception('No Service Key specified for Maxmind service');
+            }
+
+            if(!isset($this->maxmind_client)){
+                $this->maxmind_client = new Client($this->getConfig()['maxmind']['service_id'],$this->getConfig()['maxmind']['service_key']);
+            }
+
+            return $this->maxmind_client;
+        }
+
     }
 
 }

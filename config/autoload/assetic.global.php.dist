@@ -1,0 +1,50 @@
+<?php
+
+return array(
+
+    //default assetic configuration
+    'assetic_configuration' => array(
+
+        'default' => array(
+            'assets' => array(
+                '@application_css',
+                '@application_js',
+            ),
+        ),
+
+        'modules' => array(
+
+            'application' => array(
+                'root_path' => 'public/assets',
+
+                'collections' => array(
+                    'application_css' => array(
+                        'assets' => array(
+                            'application/css/application.css',
+                        ),
+                        'filters' => array(
+                            '?CssRewriteFilter' => array(
+                                'name' => 'Assetic\Filter\CssRewriteFilter'
+                            ),
+                            '?CssMinFilter' => array(
+                                'name' => 'Assetic\Filter\CssMinFilter'
+                            ),
+                        ),
+                    ),
+                    'application_js' => array(
+                        'assets' => array(
+                            'application/js/application.js',
+                        ),
+                        'filters' => array(
+                            '?JSMinFilter' => array(
+                                'name' => 'Assetic\Filter\JSMinFilter'
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+
+    ),
+
+);

@@ -21,6 +21,17 @@ return array(
                 ),
             ),
 
+            'about' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/',
+                    'defaults' => array(
+                        'controller' => 'DelamatreZend\Controller\about',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+
             'sitemap' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
@@ -104,8 +115,6 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'DelamatreZend\Controller\Index' => Controller\IndexController::class,
-            'DelamatreZend\Controller\Blog' => Controller\BlogController::class,
-            'DelamatreZend\Controller\Lead' => Controller\LeadController::class,
         ),
     ),
 
@@ -116,7 +125,7 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            //'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'layout/ajax'             => __DIR__ . '/../view/layout/ajax.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
@@ -136,6 +145,7 @@ return array(
             'adobeTypeKit'      => 'DelamatreZend\View\Helper\AdobeTypeKit',
             'googleAnalytics'   => 'DelamatreZend\View\Helper\GoogleAnalytics',
             'fontAwesome'       => 'DelamatreZend\View\Helper\FontAwesome',
+            'icon'              => 'DelamatreZend\View\Helper\Icon',
             'iconCheckMark'     => 'DelamatreZend\View\Helper\IconCheckMark',
             'IPAddress'         => 'DelamatreZend\View\Helper\IPAddress',
             'yesNo'             => 'DelamatreZend\View\Helper\YesNo',

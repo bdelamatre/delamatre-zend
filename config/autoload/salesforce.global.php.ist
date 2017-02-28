@@ -1,0 +1,20 @@
+<?php
+
+return array(
+
+    'salesforce' => array(
+        'enabled' => SALESFORCE_ENABLED,
+        'send_leads_to_salesforce' => true,
+        'send_leads_to_salesforce_using' => SEND_LEADS_TO_SALESFORCE_USING_API,
+        'api' => array(
+            'wsdl'              => 'config/enterprise.wsdl.xml',
+            'username'          => '',
+            'password'          => '',
+            'token'             => '',
+        ),
+        'web_to_lead_form'=>array(
+            'oid' => '',
+        ),
+    ),
+
+);

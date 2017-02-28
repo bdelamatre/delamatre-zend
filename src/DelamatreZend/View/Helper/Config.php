@@ -2,6 +2,8 @@
 
 namespace DelamatreZend\View\Helper;
 
+use Doctrine\Common\Util\Debug;
+
 class Config extends AbstractHelper
 {
 

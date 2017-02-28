@@ -10,7 +10,7 @@ return array(
             'username'          => 'root',
             'email'             => 'root@localhost',
             'password'          => 'root1234',
-            'type'              => \DelamatreZend\Entity\User::TYPE_SUPERADMIN,
+            'type'              => \DelamatreZend\Form\Element\UserType::TYPE_SUPERADMIN,
 
         ),
     ),

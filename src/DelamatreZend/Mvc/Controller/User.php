@@ -2,10 +2,14 @@
 
 namespace DelamatreZend\Mvc\Controller;
 
-use GeoIp2\WebService\Client;
-use GeoIp2\Database\Reader;
+use Application\Entity\Organization;
+use Zend\Crypt\Password\Bcrypt;
 
 trait User{
+
+    public function getUserClass(){
+        return $this->getConfig()['zfcuser']['user_entity_class'];
+    }
 
     /**
      * @return \Zfcuser\Controller\Plugin\ZfcUserAuthentication
@@ -20,7 +24,7 @@ trait User{
     public function getUserCount(){
 
         $qb = $this->createQueryBuilder();
-        $qb->select($qb->expr()->count('u.id'))->from('DelamatreZend\Entity\User','u')->setMaxResults(1);
+        $qb->select($qb->expr()->count('u.id'))->from($this->getUserClass(),'u')->setMaxResults(1);
         $count = $qb->getQuery()->getSingleResult();
 
         return $count[1];
@@ -44,11 +48,20 @@ trait User{
 
         if($useConfig==false || $config['user']['default_user']['createIfDbEmpty']==true){
 
-            $user = new \DelamatreZend\Entity\User();
-            $user->setDisplayName($config['user']['default_user']['displayName']);
+            $organization = new \DelamatreZend\Entity\Organization();
+            $organization->name = 'default';
+            $this->getEntityManager()->persist($organization);
+
+            //var_dump($this->getConfig()['zfcuser']['user_entity_class']); exit();
+
+            $class = $this->getUserClass();
+
+            $user = new $class();
             $user->setUsername($config['user']['default_user']['username']);
+            $user->setDisplayName($config['user']['default_user']['username']);
             $user->setPassword($config['user']['default_user']['password']);
             $user->setEmail($config['user']['default_user']['email']);
+            $user->organization = $organization;
 
             $bcrypt = new Bcrypt();
             $bcrypt->setCost($config['zfcuser']['password_cost']);

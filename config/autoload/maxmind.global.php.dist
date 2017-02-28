@@ -1,0 +1,9 @@
+<?php
+
+return array(
+    'maxmind' => array(
+        'enabled' => MAXMIND_ENABLED,
+        'service_id' => '',
+        'service_key' => '',
+    ),
+);
