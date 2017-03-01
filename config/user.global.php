@@ -30,6 +30,15 @@ return array(
         'user_entity_class' => '\DelamatreZend\Entity\User',
 
         /**
+         * Organization Model Entity Class
+         *
+         * Name of Entity class to use. Useful for using your own entity class
+         * instead of the default one provided. Default is ZfcUser\Entity\User.
+         * The entity class should implement ZfcUser\Entity\UserInterface
+         */
+        'organization_entity_class' => '\DelamatreZend\Entity\Organization',
+
+        /**
          * Enable registration
          *
          * Allows users to register through the website.

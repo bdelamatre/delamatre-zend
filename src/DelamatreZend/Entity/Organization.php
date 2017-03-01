@@ -20,7 +20,7 @@ use Doctrine\ORM\Mapping as ORM;
  * })
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="record_type", type="string")
- * @ORM\DiscriminatorMap({"user"="Organization", "surgerycenter" = "Admin\Entity\SurgeryCenter"})
+ * @ORM\DiscriminatorMap({"organization"="Organization"})
  */
 class Organization extends AbstractEntity{
 

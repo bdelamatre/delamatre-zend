@@ -2,349 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0b56e4-4659-4075-8349-6f7d45413ccc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/Changelog" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/css/elfinder.full.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/css/elfinder.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/css/theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/elfinder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/arrows-active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/arrows-normal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/crop.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/dialogs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/icons-big.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/icons-small.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/progress.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/quicklook-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/quicklook-icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/resize.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/spinner-mini.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/toolbar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_box.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_dropbox.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_ftp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_googledrive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_local.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_onedrive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/img/volume_icon_sql.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/elfinder.full.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/elfinder.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/extras/encoding-japanese.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/extras/quicklook.googledocs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.LANG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.fallback.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.jp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.pt_BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.ug_CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.zh_CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/i18n/elfinder.zh_TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/js/proxy/elFinderSupportVer1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/main.default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/elfinder/sounds/rm.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote-ext-elfinder-master/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote-ext-elfinder-master/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote-ext-elfinder-master/summernote-ext-elfinder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/font/summernote.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/font/summernote.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/font/summernote.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ar-AR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ar-AR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-bg-BG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-bg-BG.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ca-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ca-ES.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-cs-CZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-cs-CZ.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-da-DK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-da-DK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-de-DE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-es-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-es-ES.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-es-EU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-es-EU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fa-IR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fa-IR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fi-FI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fi-FI.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fr-FR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-fr-FR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-gl-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-gl-ES.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-he-IL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-he-IL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-hr-HR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-hr-HR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-hu-HU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-hu-HU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-id-ID.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-id-ID.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-it-IT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-it-IT.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ja-JP.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ko-KR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ko-KR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-lt-LT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-lt-LT.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-lt-LV.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-lt-LV.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-nb-NO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-nb-NO.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-nl-NL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-nl-NL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pl-PL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pl-PL.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pt-BR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pt-PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-pt-PT.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ro-RO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ro-RO.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ru-RU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-ru-RU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sk-SK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sk-SK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sl-SI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sl-SI.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sr-RS-Latin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sr-RS-Latin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sr-RS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sr-RS.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sv-SE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-sv-SE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-th-TH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-th-TH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-tr-TR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-tr-TR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-uk-UA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-uk-UA.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-vi-VN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-vi-VN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-zh-CN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/lang/summernote-zh-TW.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/databasic/summernote-ext-databasic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/databasic/summernote-ext-databasic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/databasic/summernote-ext-databasic.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/databasic/summernote-ext-databasic.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/hello/summernote-ext-hello.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/hello/summernote-ext-hello.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/specialchars/summernote-ext-specialchars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/plugin/specialchars/summernote-ext-specialchars.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/summernote.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/summernote.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/dist/summernote.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/airmode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/bs3fa4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/codemirror.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/external-api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/get-button.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/hint-emoji.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/hint-userdefine.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/jquery-custom-event.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/jquery18lt.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/lang.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/nativestyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/ondialog-multitab.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/ondialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/plugin-hello.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/rtl.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/examples/textarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/ie8.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/issue_template.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ar-AR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-bg-BG.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ca-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-cs-CZ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-da-DK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-es-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-es-EU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-fa-IR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-fi-FI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-fr-FR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-gl-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-he-IL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-hr-HR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-hu-HU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-id-ID.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-it-IT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ko-KR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-lt-LT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-lt-LV.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-nb-NO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-nl-NL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-pl-PL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-pt-PT.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ro-RO.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-ru-RU.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-sk-SK.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-sl-SI.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-sr-RS-Latin.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-sr-RS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-sv-SE.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-th-TH.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-tr-TR.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-uk-UA.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-vi-VN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lang/summernote-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/lite.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/package-standalone.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/package.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/publish.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/runtests.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/meteor/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/nuget-build.cmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/plugin/databasic/summernote-ext-databasic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/plugin/databasic/summernote-ext-databasic.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/plugin/hello/summernote-ext-hello.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/plugin/specialchars/summernote-ext-specialchars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/pull_request_template.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-center.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-indent.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-justify.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-left.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-outdent.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align-right.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/align.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/arrows-alt.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/bold.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/caret.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/chain-broken.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/circle.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/close.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/code.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/eraser.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/font.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/frame.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/italic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/link.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/magic.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/menu-check.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/minus.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/orderedlist.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/pencil.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/picture.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/question.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/redo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/special-character.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/square.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/strikethrough.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/subscript.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/summernote.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/superscript.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/table.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/templates/summernote.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/templates/summernote.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/text-height.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/trash.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/underline.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/undo.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/unorderedlist.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/icons/video.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/Context.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/agent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/async.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/dom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/func.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/key.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/list.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/core/range.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/editing/Bullet.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/editing/History.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/editing/Style.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/editing/Table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/editing/Typing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/AutoLink.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/AutoSync.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Clipboard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Codeview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Dropzone.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Editor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Fullscreen.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Handle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Placeholder.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/module/Statusbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/renderer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/base/summernote-en-US.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/AirPopover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/Buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/HelpDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/HintPopover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/ImageDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/ImagePopover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/LinkDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/LinkPopover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/Toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/module/VideoDialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/settings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/bs3/ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/intro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/lite/module/Toolbar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/lite/settings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/lite/ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/outro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/js/summernote.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/less/elements.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/less/elements.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/less/summernote-lite.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/less/summernote.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/src/less/summernote.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/summernote.nuspec" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/tools/NuGet.Config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/summernote/tools/nuget.exe" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/assetic.global.php" afterPath="$PROJECT_DIR$/config/assetic.global.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -358,108 +16,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bower.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.lock" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.lock">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assetic.global.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/assetic.global.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetreponseIntegration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DelamatreZend/Mvc/Controller/GetreponseIntegration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/delamatre-zend/index/index.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filemanager.global.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/filemanager.global.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilemanagerIntegration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DelamatreZend/Mvc/Controller/FilemanagerIntegration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DelamatreZend/Controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractActionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DelamatreZend/Mvc/Controller/AbstractActionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="165" column="23" lean-forward="true" selection-start-line="142" selection-start-column="7" selection-end-line="165" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -488,9 +45,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -540,7 +94,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -560,7 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -589,7 +143,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -692,6 +246,7 @@
       <workItem from="1486416692026" duration="315000" />
       <workItem from="1486436520219" duration="686000" />
       <workItem from="1486523361960" duration="1263000" />
+      <workItem from="1488384599170" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1485443639817</created>
@@ -844,17 +399,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44129000" />
+    <option name="totallyTimeSpent" value="44741000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5306554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -863,6 +417,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5306554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1181,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DelamatreZend/Mvc/Controller/GetreponseIntegration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="731">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
@@ -1235,7 +789,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/assetic.global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="510">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1244,7 +798,7 @@
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1259,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="165" column="23" lean-forward="true" selection-start-line="142" selection-start-column="7" selection-end-line="165" selection-end-column="23" />
+        <state relative-caret-position="2159">
+          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding />
         </state>
       </provider>

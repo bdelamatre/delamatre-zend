@@ -11,6 +11,10 @@ trait User{
         return $this->getConfig()['zfcuser']['user_entity_class'];
     }
 
+    public function getOrganizationClass(){
+        return $this->getConfig()['zfcuser']['organization_entity_class'];
+    }
+
     /**
      * @return \Zfcuser\Controller\Plugin\ZfcUserAuthentication
      */

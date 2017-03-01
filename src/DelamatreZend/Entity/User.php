@@ -27,7 +27,7 @@ use ZfcUser\Entity\UserInterface;
  * })
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="record_type", type="string")
- * @ORM\DiscriminatorMap({"user" = "User", "surgeon" = "Admin\Entity\Surgeon"})
+ * @ORM\DiscriminatorMap({"user" = "User"})
  */
 class User implements UserInterface{
 
@@ -39,7 +39,7 @@ class User implements UserInterface{
     protected $id;
 
     /**
-     * @ORM\Column(type="integer");
+     * @ORM\Column(type="integer",nullable=true);
      */
     protected $organization_id;
 
