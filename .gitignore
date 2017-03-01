@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nbproject
 ._*
 .~lock.*
@@ -8,3 +9,6 @@ nbproject
 .settings
 vendor/
 composer.lock
+=======
+/vendor/
+>>>>>>> origin/master

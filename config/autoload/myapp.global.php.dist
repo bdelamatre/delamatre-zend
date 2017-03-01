@@ -4,7 +4,10 @@ return array(
 'myapp' => array(
         'baseurl' => 'http://localhost',
         'timezone' => 'America/Chicago',
+<<<<<<< HEAD
         'logo' => '/assets/application/logo.png',
+=======
+>>>>>>> origin/master
         'environment' => array(
             'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
             'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',

@@ -20,7 +20,11 @@ return array(
                 'collections' => array(
                     'application_css' => array(
                         'assets' => array(
+<<<<<<< HEAD
                             'application/css/application.css',
+=======
+                            'delamatre-zend/css/delamatre-zend.css',
+>>>>>>> origin/master
                         ),
                         'filters' => array(
                             '?CssRewriteFilter' => array(
@@ -33,7 +37,11 @@ return array(
                     ),
                     'application_js' => array(
                         'assets' => array(
+<<<<<<< HEAD
                             'application/js/application.js',
+=======
+                            'delamatre-zend/js/delamatre-zend.js',
+>>>>>>> origin/master
                         ),
                         'filters' => array(
                             '?JSMinFilter' => array(

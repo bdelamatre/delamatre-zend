@@ -7,7 +7,11 @@ return array(
     //default assetic configuration
     'assetic_configuration' => array(
 
+<<<<<<< HEAD
         // Use on development environmentA
+=======
+        // Use on development environment
+>>>>>>> origin/master
         'debug' => false,
         'buildOnRequest' => false,
 

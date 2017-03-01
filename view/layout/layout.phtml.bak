@@ -7,6 +7,7 @@
 <?php echo $this->headMeta()
     ->appendName('viewport', 'width=device-width, initial-scale=1.0')
     ->appendHttpEquiv('X-UA-Compatible', 'IE=edge'); ?>
+<<<<<<< HEAD
 <?php echo $this->headLink(); ?>
 <?php echo $this->headStyle(); ?>
 <?php echo $this->headScript(); ?>
@@ -22,6 +23,14 @@
     setTimeout("contactLayover('#contact-modal')",<?=$this->config()['myapp']['contact-popup']['timeout']?>);
 </script>
 <?php endif; ?>
+=======
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<?php echo $this->headLink(); ?>
+<?php echo $this->headStyle(); ?>
+<?php echo $this->headScript(); ?>
+<?php echo $this->adobeTypeKit()?>
+<?php echo $this->googleAnalytics(null,null,array('1'=>session_id(),'2'=>$this->IPAddress())); ?>
+>>>>>>> origin/master
 </head>
 <body class="wf-loading">
 
@@ -73,7 +82,11 @@
     </header><!-- end header -->
 
     <!-- navigation -->
+<<<<<<< HEAD
     <?php echo $this->navigation('default')->menu()->setPartial(array('layout/navigation/menu.phtml','default'))->render(); ?>
+=======
+    <?php //echo $this->navigation('default')->menu()->setPartial(array('layout/navigation/menu.phtml','default'))->render(); ?>
+>>>>>>> origin/master
 
     <!-- content -->
     <?php echo $this->content; ?>
@@ -81,6 +94,7 @@
     <!-- footer -->
     <footer class="footer">
 
+<<<<<<< HEAD
         <!--  footer-bar -->
         <div class="footer-bar">
 
@@ -142,5 +156,10 @@
         </div>
     </div><!-- end:contact-modal -->
 
+=======
+    </footer>
+
+<?php echo $this->inlineScript(); ?>
+>>>>>>> origin/master
 </body>
 </html>
