@@ -94,8 +94,6 @@ class Module
             $controller = $e->getTarget();
             if($e->getRequest()->isXmlHttpRequest()) {
                 $controller->layout('layout/ajax');
-            } else {
-                $controller->layout('layout/layout');
             }
         });
 
