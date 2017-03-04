@@ -141,6 +141,7 @@ return array(
             'entityManager'     => 'DelamatreZend\View\Helper\EntityManager',
             'cmsContent'        => 'DelamatreZend\View\Helper\CmsContent',
             'config'            => 'DelamatreZend\View\Helper\Config',
+            'formElfinder'      => 'DelamatreZend\View\Helper\FormElfinder',
             'getRoute'          => 'DelamatreZend\View\Helper\GetRoute',
             'adobeTypeKit'      => 'DelamatreZend\View\Helper\AdobeTypeKit',
             'googleAnalytics'   => 'DelamatreZend\View\Helper\GoogleAnalytics',
