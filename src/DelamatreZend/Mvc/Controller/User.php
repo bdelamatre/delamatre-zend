@@ -78,7 +78,7 @@ trait User{
 
     }
 
-    public function requireAuthentication(){
+    public function requireAuthentication($allowedGroups=null){
 
 
         $userCount = $this->getUserCount();
@@ -90,11 +90,21 @@ trait User{
 
         $plugin = $this->getZfcUserAuthentication();
 
+        //if not authenticated
         if(!$plugin->hasIdentity()){
 
             //$this->redirect()->toRoute('zfcuser-login');
             $_SESSION['redirect'] = $_SERVER['REQUEST_URI'];
             $this->redirect()->toUrl('/user/login?redirect='.urlencode($_SERVER['REQUEST_URI']));
+
+        //if authenticated user doesn't have the required group
+        }elseif(!is_null($allowedGroups)
+            && !in_array($plugin->getIdentity()->getType(),$allowedGroups)){
+
+            throw new \Exception('You are not authorized to view this page');
+
+        //user is okay
+        }else{
         }
 
     }
