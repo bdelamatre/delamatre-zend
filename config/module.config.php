@@ -118,6 +118,9 @@ return array(
         ),
     ),
 
+    'module_layouts' => array(
+    ),
+
     'view_manager' => array(
         'display_not_found_reason' => true,
         'display_exceptions'       => true,

@@ -1,24 +1,55 @@
+<?php
+
+if(!$this->size){
+    $this->size = 'fa-lg';
+}
+
+if(!$this->facebook){
+    $this->facebook = $this->config()['myapp']['social']['facebook'];
+}
+
+if(!$this->twitter){
+    $this->twitter = $this->config()['myapp']['social']['twitter'];
+}
+
+if(!$this->linkedin){
+    $this->linkedin = $this->config()['myapp']['social']['linkedin'];
+}
+
+if(!$this->youtube){
+    $this->youtube = $this->config()['myapp']['social']['youtube'];
+}
+
+?>
 <div class="social">
     <ul>
+        <?php if($this->facebook): ?>
         <li>
-            <a href="https://www.facebook.com/pages/Vulcan-Systems/556615251088473" target="_blank">
-                <i class="fa fa-facebook fa-lg"></i>
+            <a href="<?=$this->facebook?>" target="_blank">
+                <i class="fa fa-facebook <?=$this->size?>"></i>
+            </a>
+         </li>
+        <?php endif; ?>
+        <?php if($this->linkedin): ?>
+            <li>
+                <a href="<?=$this->linkedin?>" target="_blank">
+                    <i class="fa fa-linkedin <?=$this->size?>"></i>
+                </a>
+            </li>
+        <?php endif; ?>
+        <?php if($this->twitter): ?>
+        <li>
+            <a href="<?=$this->twitter?>" target="_blank">
+                <i class="fa fa-twitter <?=$this->size?>"></i>
             </a>
         </li>
+        <?php endif; ?>
+        <?php if($this->youtube): ?>
         <li>
-            <a href="https://twitter.com/vulcansystems" target="_blank">
-                <i class="fa fa-twitter fa-lg"></i>
+            <a href="<?=$this->youtube?>" target="_blank">
+                <i class="fa fa-youtube <?=$this->size?>"></i>
             </a>
         </li>
-        <li>
-            <a href="https://www.linkedin.com/company/vulcansystems" target="_blank">
-                <i class="fa fa-linkedin fa-lg"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/channel/UCCh9Frvp9O_NJvUcJZ_fcmw" target="_blank">
-                <i class="fa fa-youtube fa-lg"></i>
-            </a>
-        </li>
+        <?php endif; ?>
     </ul>
 </div>

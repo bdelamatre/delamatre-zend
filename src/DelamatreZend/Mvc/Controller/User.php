@@ -11,6 +11,10 @@ trait User{
         return $this->getConfig()['zfcuser']['user_entity_class'];
     }
 
+    /*public function getZfcUserClass(){
+        return $this->getConfig()['zfcuser']['user_entity_class'];
+    }*/
+
     public function getOrganizationClass(){
         return $this->getConfig()['zfcuser']['organization_entity_class'];
     }
@@ -56,8 +60,6 @@ trait User{
             $organization->name = 'default';
             $this->getEntityManager()->persist($organization);
 
-            //var_dump($this->getConfig()['zfcuser']['user_entity_class']); exit();
-
             $class = $this->getUserClass();
 
             $user = new $class();
@@ -79,7 +81,6 @@ trait User{
     }
 
     public function requireAuthentication($allowedGroups=null){
-
 
         $userCount = $this->getUserCount();
 

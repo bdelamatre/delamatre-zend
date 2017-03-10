@@ -47,6 +47,12 @@ return array(
             'zip'=>'',
             'country'=>'',
         ),
+        'social' => array(
+            'facebook' => '',
+            'linkedin' => '',
+            'twitter' => '',
+            'youtube' => '',
+        ),
         'date_format' => 'm-d-Y',
         'datetime_format' => 'm/d/Y h:i:s',
         'time_format' => 'g:i A',

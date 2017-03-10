@@ -1,0 +1,24 @@
+<?php if($this->zfcUserIdentity()
+    || $this->config()['myapp']['environment']['type']!=ENVIRONMENT_TYPE_PRODUCTION): ?>
+
+    <!-- environment / user notification -->
+    <div class="alert alert-warning">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <?php if($this->config()['myapp']['environment']['type']!=ENVIRONMENT_TYPE_PRODUCTION ):?>
+                    This is a <?=$this->config()['myapp']['environment']['type']?> environment. Notes: <?=$this->config()['myapp']['environment']['notes']?>
+                <?php endif; ?>
+            </div>
+            <div class="col-sm-6 text-right">
+                <?php if($this->zfcUserIdentity()):?>
+                    Logged in as  <?=$this->zfcUserDisplayNAme()?> <span class="text-muted">[<?=$this->zfcUserIdentity()->getType()?>]</span> <a href="/user/logout">Logout</a>
+                <?php else: ?>
+                    <a href="/user/login">Login</a>
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </div>
+
+<?php endif; ?>
