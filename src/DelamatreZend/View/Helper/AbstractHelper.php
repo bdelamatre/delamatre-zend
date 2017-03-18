@@ -2,7 +2,7 @@
 
 namespace DelamatreZend\View\Helper;
 
-class AbstractHelper implements \Zend\ServiceManager\ServiceLocatorAwareInterface
+class AbstractHelper extends \Zend\View\Helper\AbstractHelper implements \Zend\ServiceManager\ServiceLocatorAwareInterface
 {
 
     public function getServiceLocator()

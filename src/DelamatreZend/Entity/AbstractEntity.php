@@ -47,8 +47,13 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
     public function exchangeArray(array $data)
     {
         foreach ($data as $name => $value) {
-            if (property_exists($this, $name)) {
+            if(property_exists($this, $name)) {
+                if(strstr($name,'_id')
+                    && empty($value)){
+
+                }else{
                     $this->$name = $value;
+                }
             }
         }
     }

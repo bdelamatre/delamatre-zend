@@ -153,6 +153,8 @@ return array(
             'iconCheckMark'     => 'DelamatreZend\View\Helper\IconCheckMark',
             'IPAddress'         => 'DelamatreZend\View\Helper\IPAddress',
             'yesNo'             => 'DelamatreZend\View\Helper\YesNo',
+            'productPrice'      => 'DelamatreZend\View\Helper\ProductPrice',
+            'productDiscount'   => 'DelamatreZend\View\Helper\ProductDiscount',
         )
     ),
 
