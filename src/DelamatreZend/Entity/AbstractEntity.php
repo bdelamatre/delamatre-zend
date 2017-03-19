@@ -47,8 +47,17 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
     public function exchangeArray(array $data)
     {
         foreach ($data as $name => $value) {
-            if (property_exists($this, $name)) {
+            if(property_exists($this, $name)) {
+                //if an identification field
+                if(strstr($name,'_id')){
+                    if(empty($value)){
+
+                    }else{
+                        $this->$name = (int)$value;
+                    }
+                }else{
                     $this->$name = $value;
+                }
             }
         }
     }
@@ -61,5 +70,11 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
         throw new \Exception("Not used");
     }
 
+    public function getRecordType(){
+
+        $className = get_class($this);
+        $name = basename($className);
+        return $name;
+    }
 
 }

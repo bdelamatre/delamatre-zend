@@ -94,8 +94,6 @@ class Module
             $controller = $e->getTarget();
             if($e->getRequest()->isXmlHttpRequest()) {
                 $controller->layout('layout/ajax');
-            } else {
-                $controller->layout('layout/layout');
             }
         });
 
@@ -153,6 +151,7 @@ class Module
             __DIR__ . '/config/maxmind.global.php',
             __DIR__ . '/config/myapp.global.php',
             __DIR__ . '/config/navigation.global.php',
+            __DIR__ . '/config/phantomjs.global.php',
             __DIR__ . '/config/salesforce.global.php',
             __DIR__ . '/config/session.global.php',
             __DIR__ . '/config/typekit.global.php',

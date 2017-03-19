@@ -30,7 +30,8 @@
         "natxet/CssMin" : "~3.0.4",
         "lmammino/jsmin4assetic": "~1.0.0",
         "studio-42/elfinder": "~2.1.20",
-        "monolog/monolog": "~1.22.0"
+        "monolog/monolog": "~1.22.0",
+        "evandotpro/edp-module-layouts": "dev-master"
     },
     "autoload":{
         "psr-4":{

@@ -10,24 +10,15 @@ return array(
         'timezone' => 'America/Chicago',
         'name' => 'Delamatre Zend',
         'appendTitle' => 'Delamatre Zend',
-<<<<<<< HEAD
         'logo' => '/assets/application/logo.png',
-=======
->>>>>>> origin/master
         'environment' => array(
             'type' => ENVIRONMENT_TYPE_PRODUCTION,
             'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',
-<<<<<<< HEAD
             'error_reporting' => E_WARNING | E_NOTICE | E_ERROR,
             'display_errors' => false,
             'display_exceptions' => false,
             'log_exceptions' => true,
             'log_file' => 'data/log/exception.log',
-=======
-            'error_reporting' => E_ALL,
-            'display_errors' => true,
-            'display_exceptions' => true,
->>>>>>> origin/master
         ),
         'contact' => array(
             'company_name'=>'Delamatre, LLC',
@@ -55,6 +46,12 @@ return array(
             'state'=>'',
             'zip'=>'',
             'country'=>'',
+        ),
+        'social' => array(
+            'facebook' => '',
+            'linkedin' => '',
+            'twitter' => '',
+            'youtube' => '',
         ),
         'date_format' => 'm-d-Y',
         'datetime_format' => 'm/d/Y h:i:s',

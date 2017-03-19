@@ -18,6 +18,13 @@ class AbstractActionController extends \Zend\Mvc\Controller\AbstractActionContro
     use User;
 
     /**
+     * @return \Zend\Cache\Storage\Adapter\Filesystem
+     */
+    public function getCache(){
+        return $this->getServiceLocator()->get('cache');
+    }
+
+    /**
      * @return array|object
      */
     public function getConfig(){

@@ -1,33 +1,16 @@
-<?=$this->partial('layout/components/banner.phtml',array('src'=>'whoweare.jpg'))?>
-<div class="container" id="login">
+<div class="container login-container">
+    <?php
+        $form = $this->loginForm;
+        $form->prepare();
+        $form->setAttribute('action', $this->url('zfcuser/login'));
+        $form->setAttribute('method', 'post');
+        $form->setAttribute('autocomplete', 'off');
+        $form->setAttribute('class', 'login-form');
+    ?>
+    <h2 class="form-signin-heading">Login to <?=$this->config()['myapp']['name']?></h2>
+    <?php echo $this->partial('_form.phtml', ['form' => $form, 'redirect'=>$this->redirect]); ?>
 
-    <div class="row">
-
-        <div class="col-md-8">
-
-            Stuffs
-
-        </div>
-        <div class="col-md-4">
-
-            <h1><?php echo $this->translate('Sign In'); ?></h1>
-
-            <?php
-            $form = $this->loginForm;
-            $form->prepare();
-            $form->setAttribute('action', $this->url('zfcuser/login'));
-            $form->setAttribute('method', 'post');
-            $form->setAttribute('autocomplete', 'off');
-            ?>
-
-            <?php echo $this->partial('_form.phtml', ['form' => $form, 'redirect'=>$this->redirect]); ?>
-
-            <?php if ($this->enableRegistration) : ?>
-            <?php echo $this->translate('Not registered?'); ?> <a href="<?php echo $this->url('zfcuser/register') . ($this->redirect ? '?redirect='.$this->escapeUrl($this->redirect) : '') ?>"><?php echo $this->translate('Sign up!'); ?></a>
-            <?php endif; ?>
-
-        </div>
-
-    </div>
-
+    <?php if ($this->enableRegistration) : ?>
+    <?php echo $this->translate('Not registered?'); ?> <a href="<?php echo $this->url('zfcuser/register') . ($this->redirect ? '?redirect='.$this->escapeUrl($this->redirect) : '') ?>"><?php echo $this->translate('Sign up!'); ?></a>
+    <?php endif; ?>
 </div>

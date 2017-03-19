@@ -118,6 +118,9 @@ return array(
         ),
     ),
 
+    'module_layouts' => array(
+    ),
+
     'view_manager' => array(
         'display_not_found_reason' => true,
         'display_exceptions'       => true,
@@ -141,6 +144,7 @@ return array(
             'entityManager'     => 'DelamatreZend\View\Helper\EntityManager',
             'cmsContent'        => 'DelamatreZend\View\Helper\CmsContent',
             'config'            => 'DelamatreZend\View\Helper\Config',
+            'formElfinder'      => 'DelamatreZend\View\Helper\FormElfinder',
             'getRoute'          => 'DelamatreZend\View\Helper\GetRoute',
             'adobeTypeKit'      => 'DelamatreZend\View\Helper\AdobeTypeKit',
             'googleAnalytics'   => 'DelamatreZend\View\Helper\GoogleAnalytics',
@@ -149,6 +153,8 @@ return array(
             'iconCheckMark'     => 'DelamatreZend\View\Helper\IconCheckMark',
             'IPAddress'         => 'DelamatreZend\View\Helper\IPAddress',
             'yesNo'             => 'DelamatreZend\View\Helper\YesNo',
+            'productPrice'      => 'DelamatreZend\View\Helper\ProductPrice',
+            'productDiscount'   => 'DelamatreZend\View\Helper\ProductDiscount',
         )
     ),
 

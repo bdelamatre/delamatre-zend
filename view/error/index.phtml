@@ -1,12 +1,12 @@
 <div class="container text-center">
 
-<h1>An error occured</h1>
-<h2><?php echo $this->message ?></h2>
-
+<h1>Uh Oh...An error occured</h1>
+<p><i><?php echo $this->message ?></i> If this keeps happening please send an e-mail to <a href="mailto:<?=$this->config()['myapp']['contact']['email']?>"><?=$this->config()['myapp']['contact']['email']?></a></p>
+<br/>
+<img src="/img/tbservers.png" title="4040 error" style="max-height: 400px;"/>
 
 <?php if (isset($this->config()['myapp']['environment']['display_exceptions'])
             && $this->config()['myapp']['environment']['display_exceptions']): ?>
-
 
         <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
         <hr/>
@@ -67,7 +67,7 @@
 
         <?php else: ?>
 
-                <h3><?php echo $this->translate('No Exception available') ?></h3>
+                <p><i><?php echo $this->translate('No Exception available') ?></i></p>
 
         <?php endif ?>
 
