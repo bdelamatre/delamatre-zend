@@ -48,6 +48,7 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
     {
         foreach ($data as $name => $value) {
             if(property_exists($this, $name)) {
+
                 //if an identification field
                 if(strstr($name,'_id')){
                     if(empty($value)){
@@ -55,6 +56,7 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
                     }else{
                         $this->$name = (int)$value;
                     }
+
                 }else{
                     $this->$name = $value;
                 }
