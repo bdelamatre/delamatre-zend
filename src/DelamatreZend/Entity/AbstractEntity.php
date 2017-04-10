@@ -17,6 +17,9 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
      * @return mixed
      */
     public function __get($property){
+        /*if(method_exists($this,'get'.ucfirst($property))){
+
+        }*/
         return $this->$property;
     }
 
@@ -48,14 +51,8 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
     {
         foreach ($data as $name => $value) {
             if(property_exists($this, $name)) {
-
-                //if an identification field
-                if(strstr($name,'_id')){
-                    if(empty($value)){
-
-                    }else{
-                        $this->$name = (int)$value;
-                    }
+                if(strstr($name,'_id')
+                    && empty($value)){
 
                 }else{
                     $this->$name = $value;
@@ -72,11 +69,5 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
         throw new \Exception("Not used");
     }
 
-    public function getRecordType(){
-
-        $className = get_class($this);
-        $name = basename($className);
-        return $name;
-    }
 
 }

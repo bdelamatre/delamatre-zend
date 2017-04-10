@@ -1,6 +1,17 @@
-<div class="banner">
-    <img alt="<?=$this->text?>" src="/img/banner/<?=$this->src?>">
-    <div class="container">
-        <h1 class="banner-text"><?=$this->text?></h1>
-    </div>
+<?php
+if(!isset($this->class)){
+    $this->class = '';
+}
+?>
+<div class="banner <?=$this->class?>">
+    <?php if($this->src): ?>
+        <img alt="<?=$this->text?>" src="/img/banner/<?=$this->src?>" />
+        <div class="container">
+            <h1 class="banner-text"><?=$this->text?></h1>
+        </div>
+    <?php else: ?>
+        <div class="container">
+            <h1 class="banner-text-noimage"><?=$this->text?></h1>
+        </div>
+    <?php endif; ?>
 </div>

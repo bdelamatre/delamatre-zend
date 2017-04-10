@@ -27,7 +27,7 @@ use ZfcUser\Entity\UserInterface;
  * })
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="record_type", type="string")
- * @ORM\DiscriminatorMap({"user-base" = "User", "user" = "\Application\Entity\User", "surgeon" = "\Application\Entity\Surgeon"})
+ * @ORM\DiscriminatorMap({"user" = "User"})
  */
 class User implements UserInterface{
 
@@ -42,11 +42,6 @@ class User implements UserInterface{
      * @ORM\Column(type="integer",nullable=true);
      */
     protected $organization_id;
-
-    /**
-     * @ORM\Column(type="string", nullable=true)
-     */
-    protected $key;
 
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -97,16 +92,6 @@ class User implements UserInterface{
      * @ORM\Column(type="string")
      */
     protected $type = UserType::TYPE_USER;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    public $created_datetime;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    public $updated_datetime;
 
     /**
      * @ORM\ManyToOne(targetEntity="Organization", inversedBy="users")
@@ -294,33 +279,6 @@ class User implements UserInterface{
                 $this->$name = $value;
             }
         }
-    }
-
-    /**
-     * Magic getter to expose protected properties.
-     *
-     * @param string $property
-     * @return mixed
-     */
-    public function __get($property){
-        return $this->$property;
-    }
-
-    /**
-     * Magic setter to save protected properties.
-     *
-     * @param string $property
-     * @param mixed $value
-     */
-    public function __set($property, $value){
-        $this->$property = $value;
-    }
-
-    public function getRecordType(){
-
-        $className = get_class($this);
-        $name = basename($className);
-        return $name;
     }
 
 }

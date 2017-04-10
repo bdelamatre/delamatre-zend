@@ -20,7 +20,7 @@ use Doctrine\ORM\Mapping as ORM;
  * })
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="record_type", type="string")
- * @ORM\DiscriminatorMap({"organization-base" = "Organization", "organization" = "\Application\Entity\Organization", "surgerycenter" = "\Application\Entity\SurgeryCenter"})
+ * @ORM\DiscriminatorMap({"organization"="Organization"})
  */
 class Organization extends AbstractEntity{
 
@@ -145,11 +145,6 @@ class Organization extends AbstractEntity{
      * @ORM\Column(type="integer")
      */
     protected $state = Active::STATUS_ACTIVE;
-
-    /**
-     * @ORM\Column(type="string",nullable=true)
-     */
-    protected $active = 1;
 
     /**
      * @ORM\OneToMany(targetEntity="User", mappedBy="organization")
