@@ -123,12 +123,21 @@ class Module
 
             $route = $matchedRoute->getMatchedRouteName();
 
+            //force canonical for blog-posts
+            if($route=='blog-post'){
+                unset($params['category']);
+            }
+
+            $url = $serviceManager->get('ViewHelperManager')->get('url')->__invoke($route,$params, array('force_canonical' => true));
+
+            //$url = $this->url($route, array('id' => 123), array('force_canonical' => true);
             $e->getViewModel()->setVariables(
                 array(
                     'CURRENT_MODULE_NAME' => $module,
                     'CURRENT_CONTROLLER_NAME' => $controller,
                     'CURRENT_ACTION_NAME' => $action,
                     'CURRENT_ROUTE_NAME' => $route,
+                    'CANONICAL_URL' => $url,
                 )
             );
 
@@ -149,6 +158,7 @@ class Module
             __DIR__ . '/config/google.global.php',
             __DIR__ . '/config/filemanager.global.php',
             __DIR__ . '/config/maxmind.global.php',
+            __DIR__ . '/config/mashape.global.php',
             __DIR__ . '/config/myapp.global.php',
             __DIR__ . '/config/navigation.global.php',
             __DIR__ . '/config/phantomjs.global.php',

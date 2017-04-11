@@ -1,0 +1,8 @@
+<?php
+
+return array(
+    'mashape' => array(
+        'enabled' => MASHAPE_ENABLED,
+        'key' => false,
+    ),
+);
