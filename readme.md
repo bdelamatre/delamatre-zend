@@ -74,15 +74,34 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 
 <h1>Configuration Files</h1>
 <p>One of the primary reasons for this project was to manage configuration files across all of my projects. As such, there are many different configuration files available and traits that allow for interaction with their classes.</p>
-<p>To bootstrap your project, all configurations have a default configuration that is included in this module under config/. For each configuration file there is a correspondering *.global.php.dist and/or *.local.php.dist file under config/autoload/. The builder will copy all of these distribution files into your project under config/autoload/dist/*. These distribution files contain the values that you will likely want to modify for your project.</p>
-<p>To get started with any configuration, just copy the *.dist file into config/autoload/, remove the .dist extension and make your changes. <i>Note: The required .local.php configuration files (such as database.local.php) will have already been copied there for your.</i></p>
-<h2>myap.*.php</h2>
+<p>To bootstrap your project, all configurations have a default configuration that is included in this module under config/. For each default configuration file there is a correspondering *.global.php.dist and/or *.local.php.dist file under config/autoload/dist/. The builder will copy all of these distribution files into your project under config/autoload/dist/*. These distribution files contain the values that you will likely want to modify for your project.</p>
+<p>To get started with any configuration, just copy the *.dist file into config/autoload/, remove the .dist extension and make your edits. <i>Note: The required .local.php configuration files (such as database.local.php) will have already been copied into /config/autoload/ for you by the Builder.</i></p>
+<h2>myapp.*.php</h2>
 <p>The myapp configuration file is different from the other configuration files in that it doesn't configure any specific PHP classes/libraries. Instead, the values here are used to describe general information, environment information and other application-specific settings. You should configure myapp.global.php with your general app settings and myapp.local.php with your development environment settings.</p>
+<p>
+Sample myapp.development.local.php configuration for a development environment:
+```php
+<?php
+
+return array(
+    'myapp' => array(
+        'environment' => array(
+            'type' => ENVIRONMENT_TYPE_DEVELOPMENT,
+            'notes' => 'to change to production, set [myapp][environment][type] to ENVIRONMENT_TYPE_PRODUCTION',
+            'display_errors' => true,
+            'display_exceptions' => true,
+        ),
+        'baseurl' => 'http://localhost',
+    ),
+
+);
+```
+</p>
 
 <h1>Authentication</h1>
 <h2>ZfcUser (ZfcUserDoctrineOrm)</h2>
-<p>Integration using <a href="https://packagist.org/packages/zf-commons/zfc-user">zf-commons/zfc-user</a> and <a href="https://packagist.org/packages/zf-commons/zfc-user-doctrine-orm">zf-commons/zfc-user-doctrine-orm</a>. On composer install/update the autoloader config distribution file will be copied to config/autoload/dist/user.local.php.dist. Rename this to user.local.php and modify as needed.</p>
-<p>A default [user entity](delamatre-zend/src/DelamatreZend/Entity/User.php) and [organization entity](delamatre-zend/src/DelamatreZend/Entity/Organization.php) have been created and associated as the default entities in the user config. Additional configurations include the creation of a default user if no users exist in the database. Default username/password is root/root1234.</p>
+<p>Integration using <a href="https://packagist.org/packages/zf-commons/zfc-user">zf-commons/zfc-user</a> and <a href="https://packagist.org/packages/zf-commons/zfc-user-doctrine-orm">zf-commons/zfc-user-doctrine-orm</a>. On composer install/update the autoloader config distribution file will be copied to config/autoload/dist/user.local.php.dist. No modifications are required out of box but you can rename this to user.local.php and modify if needed.</p>
+<p>A default [user entity](/src/DelamatreZend/Entity/User.php) and [organization entity](/src/DelamatreZend/Entity/Organization.php) have been created and associated as the default entities in the user config. Additional configurations include the creation of a default user if no users exist in the database. Default username/password is root/root1234.</p>
 <p>To override the default user/organization entites just extend the existing entities and update the user_entity_class and organization_entity_class user config options.</p>
 <h3>Controller Helpers</h3>
 <p>
@@ -118,6 +137,8 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 </ul>
 </p>
 <p>A default AbstractEntity provides additional functionality to any entity that inherits it. These include: magic setters/getters, entity to array and array to entity functions, etc.</p>
+<h2>database.*.php</h2>
+<p>database.local.php is one of the most important configuration files as it contains your local database connection information. There is no reason to configure database.global.php unless you need to add multiple database connections or modify entity locations.</p>
 
 <h1>Front-end</h1>
 <h2>Bower Compilation</h2>
@@ -126,6 +147,10 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 <p>Integration using <a href="https://packagist.org/packages/widmogrod/zf2-assetic-module">widmogrod/zf2-assetic-module</a>. On composer install/update the autoloader config distribution file will be copied to config/autoload/dist/assetic.global.php.dist and config/autoload/dist/assetic.local.php.dist. If it doesn't exist, config/autoload/assetic.local.php will be setup as wel. To make changes to the global Assetic config, rename the file to assetic.global.php and modify as needed.</p>
 <p>By default all public assets are assumed to belong under public/assets and assetic uses the included bower resources to autocreate a base_css.css and base_js.js file in this directory. These base files include compiled and minified code for jquery, bootstrap and font-awesome.</p>
 <p>fix-me: You will need to copy the contents of bower_components to public/assets/ so that the image resources are available to bootstrap and font-awesome.</p>
+<p>Assetic is configured to automatically add its assets to the ZF2 style and script objects. All you need to do to output assetic files is to use the headStyle() and headScript() view helpers.</p>
+<h3>assetic.*.php</h3>
+<p>Assetic is configured and ready to use out of box. However, when modifying source code that is compiled with assetic (i.e. in development) you will want to enable the buildOnRequest option to autocompile your base files. You can use the assetic.local.php.dist file to do this.</p>
+
 
 <h1>Views / Templates</h1>
 <ul>
@@ -141,6 +166,7 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 
 <h1>Zend Framework Extensions</h1>
 <h2>Form</h2>
+<p>Various custom form elements.</p>
 <h2>Mvc\Controller</h2>
 <p>An extensible AbstractActionController that provides additional controller helpers and integrations:
 <ul>
