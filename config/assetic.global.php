@@ -7,7 +7,7 @@ return array(
     //default assetic configuration
     'assetic_configuration' => array(
 
-        // Use on development environment
+        // use on development environments
         'debug' => false,
         'buildOnRequest' => false,
 
@@ -27,7 +27,7 @@ return array(
 
         'modules' => array(
             'delamatre-zend' => array(
-                'root_path' => __DIR__.'/../bower_components',
+                'root_path' => __DIR__ . '/../bower_components',
 
                 'collections' => array(
                     'base_css' => array(

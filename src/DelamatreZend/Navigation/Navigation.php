@@ -35,7 +35,7 @@ class Navigation extends DynamicNavigation
             if(!empty($page['entity'])
                     && $page['entity']!=Content::class){
                 $isCustomEntity=true;
-                $queryBuilder->from('Application\Entity\Application','e');
+                $queryBuilder->from($page['entity'],'e');
             //else use the default cms content entity
             }else{
                 $isCustomEntity=false;

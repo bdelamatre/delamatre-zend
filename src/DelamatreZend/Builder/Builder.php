@@ -5,9 +5,11 @@ namespace DelamatreZend\Builder;
 define('PATH_ROOT','');
 define('PATH_CONFIG',PATH_ROOT.'/config');
 define('PATH_CONFIG_AUTOLOAD',PATH_CONFIG.'/autoload');
+define('PATH_CONFIG_AUTOLOAD_DIST',PATH_CONFIG_AUTOLOAD.'/dist');
 define('PATH_DATA',PATH_ROOT.'/data');
 define('PATH_DATA_CACHE',PATH_DATA.'/cache');
 define('PATH_DATA_LOG',PATH_DATA.'/log');
+define('PATH_DATA_SCREENSHOTS',PATH_DATA.'/screenshots');
 define('PATH_PUBLIC',PATH_ROOT.'/public');
 define('PATH_PUBLIC_ASSETS',PATH_PUBLIC.'/assets');
 
@@ -54,18 +56,30 @@ class Builder{
         $modulePath = dirname(__DIR__).'/../..';
 
         //create config autoload directory
-        if(!file_exists(getcwd().PATH_PUBLIC_ASSETS.'/application')){
-            //mkdir(getcwd().PATH_PUBLIC_ASSETS.'/application');
-            self::recurse_copy($modulePath.PATH_PUBLIC_ASSETS.'/application',getcwd().PATH_PUBLIC_ASSETS.'/application');
+        if(!file_exists(PATH_PUBLIC_ASSETS.'/application')){
+            mkdir(PATH_PUBLIC_ASSETS.'/application');
+            self::recurse_copy($modulePath.PATH_PUBLIC_ASSETS.'/application',PATH_PUBLIC_ASSETS.'/application');
         }
 
     }
 
     public static function _setupConfigLocalFiles(){
 
+        //assetic
         if(!file_exists(PATH_CONFIG_AUTOLOAD.'/assetic.local.php')){
-            copy(PATH_CONFIG_AUTOLOAD.'/assetic.local.php.dist',PATH_CONFIG_AUTOLOAD.'/assetic.local.php');
+            copy(PATH_CONFIG_AUTOLOAD_DIST.'/assetic.local.php.dist',PATH_CONFIG_AUTOLOAD.'/assetic.local.php');
         }
+
+        //database
+        if(!file_exists(PATH_CONFIG_AUTOLOAD.'/database.local.php')){
+            copy(PATH_CONFIG_AUTOLOAD_DIST.'/database.local.php.dist',PATH_CONFIG_AUTOLOAD.'/database.local.php');
+        }
+
+        //myapp
+        if(!file_exists(PATH_CONFIG_AUTOLOAD.'/myapp.local.php')){
+            copy(PATH_CONFIG_AUTOLOAD_DIST.'/myapp.local.php.dist',PATH_CONFIG_AUTOLOAD.'/myapp.local.php');
+        }
+
 
     }
 
@@ -90,7 +104,7 @@ class Builder{
         echo 'cwd: '.getcwd()."\n";
 
         //remove existing .dist
-        $files = glob(getcwd().PATH_CONFIG_AUTOLOAD.'/{,*.php.dist}',GLOB_BRACE);
+        $files = glob(getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/{,*.php.dist}',GLOB_BRACE);
         foreach($files as $file){ // iterate files
             if(is_file($file)) {
                 echo 'unlink ' . $file . "\n";
@@ -100,11 +114,11 @@ class Builder{
 
         $modulePath = dirname(__DIR__).'/../..';
 
-        $files = glob($modulePath.PATH_CONFIG_AUTOLOAD.'/{,*.php.dist}',GLOB_BRACE);
+        $files = glob($modulePath.PATH_CONFIG_AUTOLOAD_DIST.'/{,*.php.dist}',GLOB_BRACE);
         foreach($files as $file){ // iterate files
             if(is_file($file)){
-                echo 'copy '.$file.' to '.getcwd().PATH_CONFIG_AUTOLOAD.'/'.basename($file)."\n";
-                copy($file,getcwd().PATH_CONFIG_AUTOLOAD.'/'.basename($file));
+                echo 'copy '.$file.' to '.getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file)."\n";
+                copy($file,getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file));
             }
         }
     }
@@ -121,8 +135,13 @@ class Builder{
             mkdir(PATH_CONFIG_AUTOLOAD);
         }
 
+        //create config autoload distribution directory
+        if(!file_exists(PATH_CONFIG_AUTOLOAD)){
+            mkdir(PATH_CONFIG_AUTOLOAD_DIST);
+        }
+
         //make sure that it is writable
-        chmod(PATH_CONFIG_AUTOLOAD,0777);
+        chmod(PATH_CONFIG_AUTOLOAD_DIST,0777);
 
         //create config data directory
         if(!file_exists(PATH_DATA)){
@@ -145,6 +164,15 @@ class Builder{
 
         //make sure that it is writable
         chmod(PATH_DATA_LOG,0777);
+
+
+        //create config data cache directory
+        if(!file_exists(PATH_DATA_SCREENSHOTS)){
+            mkdir(PATH_DATA_SCREENSHOTS);
+        }
+
+        //make sure that it is writable
+        chmod(PATH_DATA_SCREENSHOTS,0777);
 
         //create config data cache directory
         if(!file_exists(PATH_PUBLIC)){

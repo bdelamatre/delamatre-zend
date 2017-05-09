@@ -26,7 +26,6 @@ class Module
         $serviceManager      = $e->getApplication()->getServiceManager();
         $config              = $serviceManager->get('Config');
 
-
         //set default timezone from config
         if(isset($config['myapp']['timezone'])){
             date_default_timezone_set($config['myapp']['timezone']);
@@ -128,29 +127,18 @@ class Module
                 unset($params['category']);
             }
 
-            try{
-                $url = $serviceManager->get('ViewHelperManager')->get('url')->__invoke($route,$params, array('force_canonical' => true));
+            $url = $serviceManager->get('ViewHelperManager')->get('url')->__invoke($route,$params, array('force_canonical' => true));
 
-                //removes trailing slash
-                //fix-me: make this an option
-                if(substr($url, -1) == '/') {
-                    $url = substr($url, 0, -1);
-                }
-
-                //$url = $this->url($route, array('id' => 123), array('force_canonical' => true);
-                $e->getViewModel()->setVariables(
-                    array(
-                        'CURRENT_MODULE_NAME' => $module,
-                        'CURRENT_CONTROLLER_NAME' => $controller,
-                        'CURRENT_ACTION_NAME' => $action,
-                        'CURRENT_ROUTE_NAME' => $route,
-                        'CANONICAL_URL' => $url,
-                    )
-                );
-
-            }catch(\Exception $e) {
-
-            }
+            //$url = $this->url($route, array('id' => 123), array('force_canonical' => true);
+            $e->getViewModel()->setVariables(
+                array(
+                    'CURRENT_MODULE_NAME' => $module,
+                    'CURRENT_CONTROLLER_NAME' => $controller,
+                    'CURRENT_ACTION_NAME' => $action,
+                    'CURRENT_ROUTE_NAME' => $route,
+                    'CANONICAL_URL' => $url,
+                )
+            );
 
         }
 
