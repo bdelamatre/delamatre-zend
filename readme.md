@@ -1,4 +1,4 @@
-#DelamatreZend
+# DelamatreZend
 
 <p>
 A Zend Framework 2 module that pre-configures your Zend Framework 2 project with the following:
@@ -60,32 +60,24 @@ A set of pre-configured libraries, modules, resource view helpers, etc. that can
 
 ## Getting Started
 
-To get started, add the following to your composer.json and update composer.
+To get started, add the following to your require section in composer.json and update composer.
 
 ```
- "require": {
-        "php": ">=5.5",
-        "bdelamatre/delamatre-zend": "dev-master",
-    }
+"bdelamatre/delamatre-zend": "dev-master",
 ```
 
-You will than need to add the following modules to your ZF2 application.config.php file.
+You will then need to add the following modules to your ZF2 application.config.php file.
 
 ```php
-return array(
-	// This should be an array of module namespaces used in the application.
-	'modules' => array(
-		'EdpModuleLayouts', 	#required by DelamatreZend
-		'TwbBundle', 			#required by DelamatreZend
-		'DoctrineModule', 		#required by DelamatreZend
-		'DoctrineORMModule', 	#required by DelamatreZend
-		'ZfcBase', 				#required by DelamatreZend
-		'ZfcUser', 				#required by DelamatreZend
-		'ZfcUserDoctrineORM', 	#required by DelamatreZend
-		'AsseticBundle', 		#required by DelamatreZend
-		'DelamatreZend',		#DelamatreZend
-		'Application',
-	),
+	'EdpModuleLayouts', 	#required by DelamatreZend
+	'TwbBundle', 		#required by DelamatreZend
+	'DoctrineModule', 	#required by DelamatreZend
+	'DoctrineORMModule', 	#required by DelamatreZend
+	'ZfcBase', 			#required by DelamatreZend
+	'ZfcUser', 			#required by DelamatreZend
+	'ZfcUserDoctrineORM', 	#required by DelamatreZend
+	'AsseticBundle', 	#required by DelamatreZend
+	'DelamatreZend',	#DelamatreZend
 ```
 
 ## Project Structure
@@ -112,9 +104,18 @@ One of the primary reasons for this project was to manage configuration files ac
 
 To bootstrap your project, all configurations have a default configuration that is included in this module under config/. For each default configuration file there is a correspondering *.global.php.dist and/or *.local.php.dist file under config/autoload/dist/. The builder will copy all of these distribution files into your project under config/autoload/dist/*. These distribution files contain the values that you will likely want to modify for your project.
 
-To get started with any configuration, just copy the *.dist file into config/autoload/, remove the .dist extension and make your edits. <i>Note: The required .local.php configuration files (such as database.local.php) will have already been copied into /config/autoload/ for you by the Builder.</i>
+<ul>
+	<li>*.global.php - a global configuration file</li>
+	<li>*.local.php - a local configuration file, overrides *.global.php files.</li>
+	<li>*.dist - a distribution copy of a configuration file.</li>
+</ul>
+
+To get started with any configuration, just copy the *.dist file into config/autoload/, remove the .dist extension and make your edits. 
+
+<i>Note: The required .local.php configuration files (such as database.local.php) will have already been copied into /config/autoload/ for you by the Builder.</i>
 
 ### myapp.*.php
+
 The myapp configuration file is different from the other configuration files in that it doesn't configure any specific PHP classes/libraries. Instead, the values here are used to describe general information, environment information and other application-specific settings. You should configure myapp.global.php with your general app settings and myapp.local.php with your development environment settings.
 
 Sample myapp.development.local.php configuration for a development environment:
@@ -144,7 +145,27 @@ A default [user entity](/src/DelamatreZend/Entity/User.php) and [organization en
 
 To override the default user/organization entites just extend the existing entities and update the user_entity_class and organization_entity_class user config options.</p>
 
-####Controller Helpers
+#### Built-in controller actions
+
+Same as all of the built-in ZfCUser actions. You can login at /user/login and logout at /user/logout. Take a look at ZfcUser for other actions and helpers.
+
+#### Requiring authentication
+
+You can use the built-in ZfcUser methods and add requirements to your Module.php for requiring authentication to large chunks of your application. You can also require authentication for any controller action using this simple method:
+
+```php
+//require authentication
+$this->requireAuthentication();
+```
+
+optionally pass in an array of required groups
+
+```php
+//require authentication
+$this->requireAuthentication(array('admin')); //must be an admin
+```
+
+#### Controller Helpers
 
 When extending AbstractActionController.php or applying the User trait, the following helper methods will be available in your controller:
 <ul>
