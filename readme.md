@@ -2,14 +2,14 @@
 <p>
 A Zend Framework 2 module that pre-configures your Zend Framework 2 project with the following:
 <ul>
-    <li>Database:
-        <ul>
-            <li>Doctrine ORM</li>
-        </ul>
-    </li>
     <li>Authentication:
         <ul>
             <li>ZfcUser (ZfcUserDoctrineOrm)</li>
+        </ul>
+    </li>
+    <li>Database:
+        <ul>
+            <li>Doctrine ORM</li>
         </ul>
     </li>
     <li>Frontend:
@@ -56,6 +56,34 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 <h1>About</h1>
 <p>A set of pre-configured libraries, modules, resource view helpers, etc. that can be used to more quickly and bootstrap and Zend Framework 2 project. This will be useful for anyone who wishes to use this exact stack: ZF2+DoctrineOrm+Bootstrap+jQuery.</p>
 
+<h1>Getting Started</h1>
+<p>To get started, add the following to your composer.json and update composer.</p>
+```
+ "require": {
+        "php": ">=5.5",
+        "bdelamatre/delamatre-zend": "dev-master",
+    }
+```
+<p>
+You will than need to add the following modules to your ZF2 application.config.php file.
+```php
+return array(
+	// This should be an array of module namespaces used in the application.
+	'modules' => array(
+		'EdpModuleLayouts', 	#required by DelamatreZend
+		'TwbBundle', 			#required by DelamatreZend
+		'DoctrineModule', 		#required by DelamatreZend
+		'DoctrineORMModule', 	#required by DelamatreZend
+		'ZfcBase', 				#required by DelamatreZend
+		'ZfcUser', 				#required by DelamatreZend
+		'ZfcUserDoctrineORM', 	#required by DelamatreZend
+		'AsseticBundle', 		#required by DelamatreZend
+		'DelamatreZend',		#DelamatreZend
+		'Application',
+	),
+```
+</p>
+
 <h1>Project Structure</h1>
 <p>The following project structure is assumed for your Zend Framework 2 project and mimics the <a href="https://github.com/zendframework/ZendSkeletonApplication">ZF2 Skeleton Application</a> directory structure. You can modify this as needed.</p>
 <ul>
@@ -81,8 +109,6 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
 <p>
 Sample myapp.development.local.php configuration for a development environment:
 ```php
-<?php
-
 return array(
     'myapp' => array(
         'environment' => array(
