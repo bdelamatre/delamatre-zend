@@ -282,11 +282,11 @@ bower.json defines the needed libraries for a jquery/bootstrap/font awesome proj
 
 Integration using <a href="https://packagist.org/packages/widmogrod/zf2-assetic-module">widmogrod/zf2-assetic-module</a>. On composer install/update the autoloader config distribution file will be copied to config/autoload/dist/assetic.global.php.dist and config/autoload/dist/assetic.local.php.dist. If it doesn't exist, config/autoload/assetic.local.php will be setup as wel. To make changes to the global Assetic config, rename the file to assetic.global.php and modify as needed.
 
-By default all public assets are assumed to belong under public/assets and assetic uses the included bower resources to autocreate a base_css.css and base_js.js file in this directory. These base files include compiled and minified code for jquery, bootstrap and font-awesome.
+By default all public assets are assumed to belong under public/assets/ and assetic uses the included bower resources to autocreate a base_css.css and base_js.js file in this directory. These base files include compiled and minified code for jquery, bootstrap and font-awesome.
 
 fix-me: You will need to copy the contents of bower_components to public/assets/ so that the image resources are available to bootstrap and font-awesome.
 
-Assetic is configured to automatically add its assets to the ZF2 style and script objects. All you need to do to output assetic files is to use the headStyle() and headScript() view helpers.
+Assetic is configured to automatically add its assets to the ZF2 style and script objects. All you need to do to output assetic files is to use the headStyle() and headScript() view helpers. Refer to layout/layout.phtml for a working example.
 
 #### assetic.*.php
 <p>Assetic is configured and ready to use out of box. However, when modifying source code that is compiled with assetic (i.e. in development) you will want to enable the buildOnRequest option to autocompile your base files. You can use the assetic.local.php.dist file to do this.</p>

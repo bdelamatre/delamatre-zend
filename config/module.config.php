@@ -2,8 +2,6 @@
 
 namespace DelamatreZend;
 
-use DelamatreZend\Entity\User;
-
 return array(
 
     //default routes
@@ -156,21 +154,6 @@ return array(
             'productPrice'      => 'DelamatreZend\View\Helper\ProductPrice',
             'productDiscount'   => 'DelamatreZend\View\Helper\ProductDiscount',
         )
-    ),
-
-    //default session configuration
-    'session' => array(
-        'config' => array(
-            'class' => 'Zend\Session\Config\SessionConfig',
-            'options' => array(
-                'name' => 'delamatre',
-            ),
-        ),
-        'storage' => 'Zend\Session\Storage\SessionArrayStorage',
-        'validators' => array(
-            'Zend\Session\Validator\RemoteAddr',
-            'Zend\Session\Validator\HttpUserAgent',
-        ),
     ),
 
 );

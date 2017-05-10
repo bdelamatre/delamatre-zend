@@ -1,0 +1,15 @@
+<?php
+
+return array(
+    'filemanager' => array(
+        'enable' => ELFINDER_ENABLED,
+        'locale' => 'en_US.UTF-8',
+        'roots'  => array(
+            array(
+                'driver' => 'LocalFileSystem',
+                'path'   => '/',
+                'URL'    => '/',
+            )
+        )
+    ),
+);

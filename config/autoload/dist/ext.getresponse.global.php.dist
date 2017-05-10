@@ -1,12 +1,10 @@
 <?php
 
 return array(
-
     'getresponse' => array(
         'enabled' => GETRESPONSE_ENABLED,
         'api_key' => "",
         'enterprise_domain' => null,
         'api_url' => null,
     ),
-
 );

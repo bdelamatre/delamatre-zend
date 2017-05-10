@@ -1,16 +1,17 @@
 <?php
-/**
-To customize your session settings, paste this into your configs/* directory
-**/
+
 return array(
-
-   //default session configuration
-   'session' => array(
-       'config' => array(
-           'options' => array(
-               'name' => 'delamatre',
-           ),
-       ),
-   ),
-
+    'session' => array(
+        'config' => array(
+            'class' => 'Zend\Session\Config\SessionConfig',
+            'options' => array(
+                'name' => 'delamatre',
+            ),
+        ),
+        'storage' => 'Zend\Session\Storage\SessionArrayStorage',
+        'validators' => array(
+            'Zend\Session\Validator\RemoteAddr',
+            'Zend\Session\Validator\HttpUserAgent',
+        ),
+    ),
 );

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Default configuration file for Doctrine ORM
+ *
+ * Configures a default driver, entity manager and orm configuration.
+ */
 return array(
 
     //doctrine settings

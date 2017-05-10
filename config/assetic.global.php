@@ -1,13 +1,22 @@
 <?php
 
-namespace DelamatreZend;
-
+/**
+ * Default configuration file for Assetic
+ *
+ * Creates two files
+ *     base_css.css = contains the default css
+ *     base_js = contains the default js
+ *
+ * Debugging and buildOnRequest disabled by default. These need to be
+ * enabled at least once to build the assetic files and than they can
+ * be disabled again.
+ */
 return array(
 
     //default assetic configuration
     'assetic_configuration' => array(
 
-        // use on development environments
+        //use on development environments
         'debug' => false,
         'buildOnRequest' => false,
 
@@ -15,6 +24,7 @@ return array(
         'webPath' => realpath('public/assets'),
         'basePath' => 'assets',
 
+        //configuration of default modules
         'default' => array(
             'assets' => array(
                 '@base_css',
@@ -25,6 +35,7 @@ return array(
             ),
         ),
 
+        //resources to include in default modules
         'modules' => array(
             'delamatre-zend' => array(
                 'root_path' => __DIR__ . '/../bower_components',
