@@ -65,6 +65,15 @@ To get started, add the following to the require section in your composer.json t
 "bdelamatre/delamatre-zend": "dev-master",
 ```
 
+And the following scripts section to your composer.json
+
+```
+"scripts": {
+    "post-install-cmd": "DelamatreZend\\Builder\\Builder::postInstall",
+    "post-update-cmd": "DelamatreZend\\Builder\\Builder::postUpdate"
+}
+```
+
 You will then need to add the following modules to your ZF2 application.config.php file.
 
 ```php
@@ -217,13 +226,22 @@ When extending AbstractActionController.php or applying the User trait, the foll
 
 ## Builder
 
-A simple PHP class that contains static functions for use as composer hooks. The builder does the following out of box:
+A simple PHP class that contains static functions for use as composer hooks, no command line required. If you haven't already configured your composer.json to use the builder, add the following to your composer.json
+
+```
+"scripts": {
+    "post-install-cmd": "DelamatreZend\\Builder\\Builder::postInstall",
+    "post-update-cmd": "DelamatreZend\\Builder\\Builder::postUpdate"
+}
+```
+
+The builder does the following out of box
 
 * Setup required project directories and permissions
-* Copy config distrubtion files to config/autoload/dist/
-* Copy required public assets to public/assets/
+* Copy config distribution files to config/autoload/dist/ and required local files config/autoload/
+* Copy public assets to public/assets/
 
-You don't have to do anything to use the builder, it is configured to run using Composer hooks and in conjunction with the default project structure.
+You don't have to do anything to use the builder other than add the hooks to your composer.json.
 
 ## Database
 

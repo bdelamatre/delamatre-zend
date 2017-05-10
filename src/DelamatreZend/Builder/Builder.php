@@ -2,7 +2,7 @@
 
 namespace DelamatreZend\Builder;
 
-define('PATH_ROOT','');
+define('PATH_ROOT',getcwd());
 define('PATH_CONFIG',PATH_ROOT.'/config');
 define('PATH_CONFIG_AUTOLOAD',PATH_CONFIG.'/autoload');
 define('PATH_CONFIG_AUTOLOAD_DIST',PATH_CONFIG_AUTOLOAD.'/dist');
@@ -85,26 +85,22 @@ class Builder{
 
     public static function _syncPublicAssetFiles(){
 
-        echo 'cwd: '.getcwd()."\n";
+        echo "synchronize public asset files from bower";
 
         $modulePath = dirname(__DIR__).'/../..';
 
         $files = glob($modulePath.'/bower_components'.'/*');
         foreach($files as $file){ // iterate files
-            if(file_exists(getcwd().PATH_PUBLIC_ASSETS.'/'.basename($file))){
-                unlink(getcwd().PATH_PUBLIC_ASSETS.'/'.basename($file));
-            }
-            echo 'copy '.$file.' to '.getcwd().PATH_CONFIG_AUTOLOAD.'/'.basename($file)."\n";
-            self::recurse_copy($file,getcwd().PATH_PUBLIC_ASSETS.'/'.basename($file));
+            self::recurse_copy($file,PATH_PUBLIC_ASSETS.'/'.basename($file));
         }
     }
 
     public static function _syncConfigDistributionFiles(){
 
-        echo 'cwd: '.getcwd()."\n";
+        echo 'synchronizing distribution files in'.PATH_ROOT."\n";
 
         //remove existing .dist
-        $files = glob(getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/{,*.php.dist}',GLOB_BRACE);
+        $files = glob(PATH_CONFIG_AUTOLOAD_DIST.'/{,*.php.dist}',GLOB_BRACE);
         foreach($files as $file){ // iterate files
             if(is_file($file)) {
                 echo 'unlink ' . $file . "\n";
@@ -114,29 +110,34 @@ class Builder{
 
         $modulePath = dirname(__DIR__).'/../..';
 
-        $files = glob($modulePath.PATH_CONFIG_AUTOLOAD_DIST.'/{,*.php.dist}',GLOB_BRACE);
+        $files = glob($modulePath.'/config/autoload/dist'.'/{,*.php.dist}',GLOB_BRACE);
         foreach($files as $file){ // iterate files
             if(is_file($file)){
-                echo 'copy '.$file.' to '.getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file)."\n";
-                copy($file,getcwd().PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file));
+                echo 'copy '.$file.' to '.PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file)."\n";
+                copy($file,PATH_CONFIG_AUTOLOAD_DIST.'/'.basename($file));
             }
         }
     }
 
     public static function _buildDirectories(){
 
+        echo "verifying project directory structure in ".PATH_ROOT."\n";
+
         //create config directory
         if(!file_exists(PATH_CONFIG)){
+            echo "creating ".PATH_CONFIG."\n";
             mkdir(PATH_CONFIG);
         }
 
         //create config autoload directory
         if(!file_exists(PATH_CONFIG_AUTOLOAD)){
+            echo "creating ".PATH_CONFIG_AUTOLOAD."\n";
             mkdir(PATH_CONFIG_AUTOLOAD);
         }
 
         //create config autoload distribution directory
-        if(!file_exists(PATH_CONFIG_AUTOLOAD)){
+        if(!file_exists(PATH_CONFIG_AUTOLOAD_DIST)){
+            echo "creating ".PATH_CONFIG_AUTOLOAD_DIST."\n";
             mkdir(PATH_CONFIG_AUTOLOAD_DIST);
         }
 
@@ -145,11 +146,13 @@ class Builder{
 
         //create config data directory
         if(!file_exists(PATH_DATA)){
+            echo "creating ".PATH_DATA."\n";
             mkdir(PATH_DATA);
         }
 
         //create config data cache directory
         if(!file_exists(PATH_DATA_CACHE)){
+            echo "creating ".PATH_CONFIG."\n";
             mkdir(PATH_DATA_CACHE);
         }
 
@@ -159,6 +162,7 @@ class Builder{
 
         //create config data cache directory
         if(!file_exists(PATH_DATA_LOG)){
+            echo "creating ".PATH_DATA_LOG."\n";
             mkdir(PATH_DATA_LOG);
         }
 
@@ -168,6 +172,7 @@ class Builder{
 
         //create config data cache directory
         if(!file_exists(PATH_DATA_SCREENSHOTS)){
+            echo "creating ".PATH_CONFIG."\n";
             mkdir(PATH_DATA_SCREENSHOTS);
         }
 
@@ -176,6 +181,7 @@ class Builder{
 
         //create config data cache directory
         if(!file_exists(PATH_PUBLIC)){
+            echo "creating ".PATH_PUBLIC."\n";
             mkdir(PATH_PUBLIC);
         }
 
@@ -184,6 +190,7 @@ class Builder{
 
         //create config data cache directory
         if(!file_exists(PATH_PUBLIC_ASSETS)){
+            echo "creating ".PATH_CONFIG."\n";
             mkdir(PATH_PUBLIC_ASSETS);
         }
 
