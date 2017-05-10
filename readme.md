@@ -59,6 +59,8 @@ A set of pre-configured libraries, modules, resources, view helpers, etc. that c
 
 ## Getting Started
 
+<a href="https://packagist.org/packages/bdelamatre/delamatre-zend">View on Packagist</a>
+
 To get started, add the following to the require section in your composer.json then update composer.
 
 ```
