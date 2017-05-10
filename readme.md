@@ -1,7 +1,7 @@
 # DelamatreZend
 
-<p>
 A Zend Framework 2 module that pre-configures your Zend Framework 2 project with the following:
+
 <ul>
     <li>Authentication:
         <ul>
@@ -52,15 +52,14 @@ A Zend Framework 2 module that pre-configures your Zend Framework 2 project with
         </ul>
     </li>
 </ul>
-</p>
 
 ## About
 
-A set of pre-configured libraries, modules, resource view helpers, etc. that can be used to more quickly and bootstrap and Zend Framework 2 project. This will be useful for anyone who wishes to use this exact stack: ZF2+DoctrineOrm+Bootstrap+jQuery.
+A set of pre-configured libraries, modules, resources, view helpers, etc. that can be used to quickly bootstrap your Zend Framework 2 project. This will be useful for anyone who wants to build a full-stack application using Zend Framework2 + DoctrineOrm + Twitter Bootstrap + jQuery. You may also find this project useful as a reference if you are trying to integrate any of the above libraries into your own Zend Framework 2 project.
 
 ## Getting Started
 
-To get started, add the following to your require section in composer.json and update composer.
+To get started, add the following to the require section in your composer.json then update composer.
 
 ```
 "bdelamatre/delamatre-zend": "dev-master",
@@ -73,8 +72,8 @@ You will then need to add the following modules to your ZF2 application.config.p
 	'TwbBundle', 		#required by DelamatreZend
 	'DoctrineModule', 	#required by DelamatreZend
 	'DoctrineORMModule', 	#required by DelamatreZend
-	'ZfcBase', 			#required by DelamatreZend
-	'ZfcUser', 			#required by DelamatreZend
+	'ZfcBase', 	#required by DelamatreZend
+	'ZfcUser', 	#required by DelamatreZend
 	'ZfcUserDoctrineORM', 	#required by DelamatreZend
 	'AsseticBundle', 	#required by DelamatreZend
 	'DelamatreZend',	#DelamatreZend
@@ -100,9 +99,24 @@ The following project structure is assumed for your Zend Framework 2 project and
 
 ## Configuration Files
 
-One of the primary reasons for this project was to manage configuration files across all of my projects. As such, there are many different configuration files available and traits that allow for interaction with their classes.
+One of the primary goals of this project is to manage configuration files across a multitude of similiar projects. As such, there are many different configuration files available and traits that allow for interaction with the classes that they configure.
 
-To bootstrap your project, all configurations have a default configuration that is included in this module under config/. For each default configuration file there is a correspondering *.global.php.dist and/or *.local.php.dist file under config/autoload/dist/. The builder will copy all of these distribution files into your project under config/autoload/dist/*. These distribution files contain the values that you will likely want to modify for your project.
+* **assetic.*.php** - Configures Assetic
+* **doctrine.*.php** - Configures Doctrine ORM
+* **ext.filemanager.*.php** - Configures elFinder Filemanager integration
+* **ext.getresponse.*.php** - Configures GetResponse360 integration
+* **ext.google.*.php** - Configues Google integration
+* **ext.mashape.*.php** -- Configures Mashape integration
+* **ext.maxmind.*.php** -- Configures Maxmind (Geoip2) integration
+* **ext.phantomjs.*.php** -- Configures PhantomJS integration
+* **ext.salesforce.*.php** -- Configures SalesForce integration
+* **ext.typekit.*.php** -- Configures Typekit integration
+* **myapp.*.php** -- Configures information about the application
+* **navigation.*.php** -- Configures the navigation menu
+* **session.*.php** -- Configures PHP sessions
+* **user.*.php** -- Configures authentication / ZfCUser
+
+Configuration extensions
 
 <ul>
 	<li>*.global.php - a global configuration file</li>
@@ -110,7 +124,14 @@ To bootstrap your project, all configurations have a default configuration that 
 	<li>*.dist - a distribution copy of a configuration file.</li>
 </ul>
 
-To get started with any configuration, just copy the *.dist file into config/autoload/, remove the .dist extension and make your edits. 
+
+### Default configuration files
+
+To bootstrap your project, all configurations have a default configuration that is included in this module under config/. By default, all ext.*.php config files are disabled and the rest of the configurations work out of box with the default project structure.
+
+### Distribution configuration files
+
+For each default configuration file there is a correspondering *.global.php.dist and/or *.local.php.dist file under config/autoload/dist/. The builder will copy all of these distribution files into your project under config/autoload/dist/*. These distribution files contain the values that you will likely want to modify for your project. To use them, just copy/paste the distribution file into config/autoload/, remove the .dist extension and modify as needed.
 
 <i>Note: The required .local.php configuration files (such as database.local.php) will have already been copied into /config/autoload/ for you by the Builder.</i>
 
