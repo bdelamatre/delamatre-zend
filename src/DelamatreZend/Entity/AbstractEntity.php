@@ -69,5 +69,11 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
         throw new \Exception("Not used");
     }
 
+    public function getRecordType(){
+
+        $className =  str_replace('\\', '/',get_class($this));
+        $name = basename($className);
+        return $name;
+    }
 
 }

@@ -27,7 +27,7 @@ use ZfcUser\Entity\UserInterface;
  * })
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="record_type", type="string")
- * @ORM\DiscriminatorMap({"user" = "User"})
+ * @ORM\DiscriminatorMap({"user-base" = "User", "user" = "\Application\Entity\User", "surgeon" = "\Application\Entity\Surgeon"})
  */
 class User implements UserInterface{
 
@@ -61,22 +61,22 @@ class User implements UserInterface{
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    protected $preferred_contact_type;
+    public $preferred_contact_type;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    protected $mobile;
+    public $mobile;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    protected $phone;
+    public $phone;
 
     /**
      * @ORM\Column(type="string", nullable=true)
      */
-    protected $fax;
+    public $fax;
 
     /**
      * @ORM\Column(type="string")
@@ -279,6 +279,13 @@ class User implements UserInterface{
                 $this->$name = $value;
             }
         }
+    }
+
+    public function getRecordType(){
+
+        $className =  str_replace('\\', '/',get_class($this));
+        $name = basename($className);
+        return $name;
     }
 
 }
