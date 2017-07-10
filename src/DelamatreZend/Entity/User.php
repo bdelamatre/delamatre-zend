@@ -288,4 +288,11 @@ class User implements UserInterface{
         return $name;
     }
 
+	    /**
+     * @return UserForm
+     */
+    public function getForm(){
+        return new UserForm();
+    }
+
 }
