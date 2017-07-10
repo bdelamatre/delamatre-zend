@@ -71,14 +71,14 @@ class Builder{
         }
 
         //database
-        if(!file_exists(PATH_CONFIG_AUTOLOAD.'/database.local.php')){
-            copy(PATH_CONFIG_AUTOLOAD_DIST.'/database.local.php.dist',PATH_CONFIG_AUTOLOAD.'/database.local.php');
+        if(!file_exists(PATH_CONFIG_AUTOLOAD.'/doctrine.local.php')){
+            copy(PATH_CONFIG_AUTOLOAD_DIST.'/doctrine.local.php.dist',PATH_CONFIG_AUTOLOAD.'/doctrine.local.php');
         }
 
         //myapp
-        if(!file_exists(PATH_CONFIG_AUTOLOAD.'/myapp.local.php')){
+        /*if(!file_exists(PATH_CONFIG_AUTOLOAD.'/myapp.local.php')){
             copy(PATH_CONFIG_AUTOLOAD_DIST.'/myapp.local.php.dist',PATH_CONFIG_AUTOLOAD.'/myapp.local.php');
-        }
+        }*/
 
 
     }
@@ -142,6 +142,7 @@ class Builder{
         }
 
         //make sure that it is writable
+        echo "Setting permissions for ".PATH_CONFIG_AUTOLOAD_DIST." to 0777";
         chmod(PATH_CONFIG_AUTOLOAD_DIST,0777);
 
         //create config data directory

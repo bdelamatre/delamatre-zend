@@ -127,7 +127,10 @@ class Module
                 unset($params['category']);
             }
 
-            $url = $serviceManager->get('ViewHelperManager')->get('url')->__invoke($route,$params, array('force_canonical' => true));
+
+            if(!in_array($route,array('doctrine_cli'))){
+                $url = $serviceManager->get('ViewHelperManager')->get('url')->__invoke($route,$params, array('force_canonical' => true));
+            }
 
             //$url = $this->url($route, array('id' => 123), array('force_canonical' => true);
             $e->getViewModel()->setVariables(
