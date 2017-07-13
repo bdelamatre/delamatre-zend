@@ -96,9 +96,12 @@ trait User{
 
             //$this->redirect()->toRoute('zfcuser-login');
             $_SESSION['redirect'] = $_SERVER['REQUEST_URI'];
-            $this->redirect()->toUrl('/user/login?redirect='.urlencode($_SERVER['REQUEST_URI']));
+            $url = '/user/login?redirect='.urlencode($_SERVER['REQUEST_URI']);
+            //$this->redirect()->toUrl('/user/login?redirect='.urlencode($_SERVER['REQUEST_URI']));
+            header( "Location: $url" ) ;
+            exit();
 
-        //if authenticated user doesn't have the required group
+            //if authenticated user doesn't have the required group
         }elseif(!is_null($allowedGroups)
             && !in_array($plugin->getIdentity()->getType(),$allowedGroups)){
 
