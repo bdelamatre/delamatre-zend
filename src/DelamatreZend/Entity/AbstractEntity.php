@@ -53,7 +53,7 @@ abstract class AbstractEntity implements InputFilterAwareInterface{
             if(property_exists($this, $name)) {
                 if(strstr($name,'_id')
                     && empty($value)){
-
+                    $this->$name = null;
                 }else{
                     $this->$name = $value;
                 }

@@ -9,7 +9,7 @@ class AdobeTypeKit extends AbstractHelper
     {
 
         //if the typekitid isn't passed to the helper manually
-        if(is_null($typeKitId)){
+        if($typeKitId){
 
             //get it from configuration
 
